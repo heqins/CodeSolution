@@ -1,5 +1,5 @@
 //    Definition for singly-linked list.
-package easy;
+package LinkedList;
 
 public class ListNode {
       int val;

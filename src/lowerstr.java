@@ -1,5 +1,3 @@
-package easy;
-
 public class lowerstr {
     public String toLowerCase(String str) {
         String newstr = "";

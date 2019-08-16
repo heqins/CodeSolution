@@ -1,5 +1,3 @@
-package easy;
-
 public class defangIPaddress {
     public String defangIPaddr(String address) {
         return address.replace(".", "[.]");

@@ -1,5 +1,3 @@
-package easy;
-
 public class rangesumBST {
     class TreeNode {
       int val;

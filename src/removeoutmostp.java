@@ -1,7 +1,3 @@
-package easy;
-
-import java.util.Stack;
-
 /**
  * 看到括号匹配，大家一般都想到用一个栈，其实不用栈也可以。
  *

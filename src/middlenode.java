@@ -1,4 +1,4 @@
-package easy;
+import LinkedList.ListNode;
 
 public class middlenode {
     public ListNode middleNode(ListNode head) {

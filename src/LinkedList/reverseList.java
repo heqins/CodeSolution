@@ -1,4 +1,4 @@
-package easy;
+package LinkedList;
 
 public class reverseList {
     public ListNode reverseList(ListNode head) {
