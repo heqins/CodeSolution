@@ -1,3 +1,5 @@
+package Str;
+
 public class lowerstr {
     public String toLowerCase(String str) {
         String newstr = "";

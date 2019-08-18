@@ -1,3 +1,5 @@
+package Tree;
+
 public class rangesumBST {
     class TreeNode {
       int val;
