@@ -1,5 +1,4 @@
-package Tree;
-import Tree.TreeNode;
+package BinaryTree;
 
 /**
  先用的方法是只计算根节点的左右节点的高度，然后返回两个数相加的和，

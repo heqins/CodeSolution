@@ -1,4 +1,4 @@
-package Tree;
+package BinaryTree;
 
 public class rangesumBST {
     class TreeNode {
