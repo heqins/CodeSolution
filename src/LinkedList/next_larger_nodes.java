@@ -3,7 +3,7 @@ package LinkedList;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class nextLargerNodes {
+public class next_larger_nodes {
     public int[] nextLargerNodes(ListNode head) {
         ArrayList<Integer> nums = new ArrayList<>();
         while (head != null) {

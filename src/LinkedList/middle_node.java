@@ -2,7 +2,7 @@ package LinkedList;
 
 import LinkedList.ListNode;
 
-public class middlenode {
+public class middle_node {
     public ListNode middleNode(ListNode head) {
         /**
          * Complexity Analysis

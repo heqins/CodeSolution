@@ -1,6 +1,6 @@
 package Str;
 
-public class lowerstr {
+public class lower_str {
     public String toLowerCase(String str) {
         String newstr = "";
         int n;
@@ -16,7 +16,7 @@ public class lowerstr {
     }
 
     public static void main(String[] args) {
-        lowerstr low = new lowerstr();
+        lower_str low = new lower_str();
         System.out.println(low.toLowerCase("DDDdddCC90012C"));
     }
 }
