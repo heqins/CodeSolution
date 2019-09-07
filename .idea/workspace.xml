@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9b5d4f-e0ba-4902-ad44-57e5ed8fc6a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Array/contains_duplicate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Array/intersection_of_two_arrays2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Array/single_number.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Array/sum_of_two_integers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTree/maximum_depth_of_binary_tree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataStructure/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LinkedList/delete_node_in_a_linked_list.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Str/add_binary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Str/camelcase_matching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Str/find_common_characters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/climbing_stairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/happy_number.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,16 +51,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.find_common_characters">
-    <configuration name="contains_duplicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Array.contains_duplicate" />
+  <component name="RunManager" selected="Application.climbing_stairs">
+    <configuration name="climbing_stairs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="climbing_stairs" />
       <module name="LeetCodeSolution" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,21 +72,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="intersection_of_two_arrays2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Array.intersection_of_two_arrays2" />
+    <configuration name="happy_number" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="happy_number" />
       <module name="LeetCodeSolution" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Array.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="single_number" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Array.single_number" />
+    <configuration name="intersection_of_two_arrays2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Array.intersection_of_two_arrays2" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
@@ -128,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.climbing_stairs" />
+        <item itemvalue="Application.happy_number" />
         <item itemvalue="Application.find_common_characters" />
         <item itemvalue="Application.intersection_of_two_arrays2" />
         <item itemvalue="Application.sum_of_two_integers" />
-        <item itemvalue="Application.contains_duplicate" />
-        <item itemvalue="Application.single_number" />
       </list>
     </recent_temporary>
   </component>
@@ -151,6 +130,7 @@
       <workItem from="1567772949310" duration="3138000" />
       <workItem from="1567776651128" duration="1013000" />
       <workItem from="1567778032782" duration="1273000" />
+      <workItem from="1567819760649" duration="1524000" />
     </task>
     <servers />
   </component>
