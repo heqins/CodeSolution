@@ -23,7 +23,7 @@ public class climbing_stairs {
             dp[i] = dp[i - 1] + dp[i - 2];
         }
         return dp[n];
-        
+    }
         /**
          * int[] dp = new int[n + 1]; // save all caculated values
          * dp[0] = 1; // base case
@@ -34,7 +34,6 @@ public class climbing_stairs {
          *  return dp[n];
          *  }
 
-    
     public static void main(String[] args) {
         climbing_stairs cs = new climbing_stairs();
         System.out.println(cs.climbStairs(44));
