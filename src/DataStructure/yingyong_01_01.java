@@ -1,14 +1,13 @@
 package DataStructure;
 
 public class yingyong_01_01 {
-    public int removeMin(SequenceList seqList) {
+    public static int removeMin(SequenceList seqList) {
         int min = (int)seqList.table[0];
         int index = 0;
         for (int i = 1; i < seqList.len; i++) {
-            if ((int)seqList.table[i] < min) {
+            if ((int)seqList.table[i] <= min) {
                 min = (int)seqList.table[i];
                 index = i;
-                break;
             }
         }
         seqList.table[index] = seqList.table[seqList.len - 1];
@@ -16,7 +15,7 @@ public class yingyong_01_01 {
         return min;
     }
 
-    public void removeDuplicate(SequenceList seqList) {
+    public static void removeDuplicate(SequenceList seqList) {
         for (int i = 0; i < seqList.len; i++) {
             for (int j = i + 1; j < seqList.len; j++) {
                 if ((int)seqList.table[i] == (int)seqList.table[j]) {
@@ -29,26 +28,50 @@ public class yingyong_01_01 {
         }
     }
 
-    public void removeAllElem(SequenceList seqList, int elem) {
-
+    public static void removeAll(SequenceList seqList, int elem) {
+        int k = 0;
+        for (int i = 0; i < seqList.len; i++) {
+            if ((int)seqList.table[i] != elem) {
+                seqList.table[k] = seqList.table[i];
+                k++;
+            }
+        }
+        seqList.len = k;
     }
 
     public static void main(String[] args) {
-        yingyong_01_01 y0101 = new yingyong_01_01();
         SequenceList seqList = new SequenceList(999);
-        seqList.add(1);
-        seqList.add(1);
+        seqList.add(5);
+        seqList.add(2);
         seqList.add(3);
         seqList.add(4);
-        seqList.add(6);
-//        System.out.println(y0101.removeMin(seqList));
-//        System.out.println(seqList.table[1]);
+        seqList.add(-1);
 
-        y0101.removeAllElem(seqList, 1);
+        System.out.println(removeMin(seqList));
         System.out.println(seqList.len);
-        System.out.println(seqList.table[0]);
+        System.out.println(seqList.table[3]);
+        System.out.println("--------");
 
-        y0101.removeDuplicate(seqList);
-//        System.out.println(seqList.len);
+        SequenceList seqList2 = new SequenceList(999);
+        seqList2.add(1);
+        seqList2.add(1);
+        seqList2.add(3);
+        seqList2.add(5);
+        seqList2.add(5);
+
+        removeAll(seqList2, 1);
+        System.out.println(seqList2.len);
+        System.out.println(seqList2.table[0]);
+        System.out.println("--------");
+
+        SequenceList seqList3 = new SequenceList(999);
+        seqList3.add(1);
+        seqList3.add(1);
+        seqList3.add(3);
+        seqList3.add(5);
+        seqList3.add(5);
+
+        removeDuplicate(seqList3);
+        System.out.println(seqList3.len);
     }
 }

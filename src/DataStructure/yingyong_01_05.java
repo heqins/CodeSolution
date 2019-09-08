@@ -2,7 +2,7 @@ package DataStructure;
 
 public class yingyong_01_05 {
         // List: no head
-        public void insert(ListNode head, int e) {
+        public static void insert(ListNode head, int e) {
             ListNode p = head.next;
             while (p != null) {
                 if (p.val > e) {
@@ -15,7 +15,7 @@ public class yingyong_01_05 {
             }
         }
 
-        public void remove(ListNode head, int e) {
+        public static void remove(ListNode head, int e) {
             ListNode p = head;
             ListNode prev = null;
             while (p != null) {
@@ -37,8 +37,7 @@ public class yingyong_01_05 {
             head.next = h1;
             h1.next = h2;
             h2.next = h3;
-            yingyong_01_05 y0106 = new yingyong_01_05();
-            y0106.remove(head, 21);
+            remove(head, 21);
             System.out.println(head.val);
         }
     }

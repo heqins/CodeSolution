@@ -1,7 +1,7 @@
 package DataStructure;
 
 public class yingyong_01_04 {
-        public ListNode getNode(ListNode head, int i) {
+        public static ListNode getNode(ListNode head, int i) {
             if (head == null) {
                 return null;
             }
@@ -13,7 +13,7 @@ public class yingyong_01_04 {
             }
             return p;
         }
-        public int elemCount(ListNode head, int e) {
+        public static int elemCount(ListNode head, int e) {
             int count = 0;
 
             ListNode p = head.next;
@@ -35,9 +35,8 @@ public class yingyong_01_04 {
             head.next = h1;
             h1.next = h2;
             h2.next = h3;
-            yingyong_01_04 y04 = new yingyong_01_04();
-            System.out.println(y04.getNode(head, 1).val);
-            System.out.println(y04.elemCount(head, 2));
+            System.out.println(getNode(head, 1).val);
+            System.out.println(elemCount(head, 2));
         }
     }
 

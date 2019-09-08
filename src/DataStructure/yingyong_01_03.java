@@ -1,7 +1,7 @@
 package DataStructure;
 
 public class yingyong_01_03 {
-        public ListNode reverse(ListNode head) {
+        public static ListNode reverse(ListNode head) {
             ListNode prev = null;
             ListNode cur = head;
             while(cur!=null){
@@ -15,7 +15,7 @@ public class yingyong_01_03 {
             return head;
         }
 
-        public void reverse(SequenceList seqList) {
+        public static void reverse(SequenceList seqList) {
             int mid = seqList.len / 2;
             for (int i = 0; i < mid; i++) {
                 int temp = (int)seqList.table[i];
@@ -32,8 +32,7 @@ public class yingyong_01_03 {
             head.next = h1;
             h1.next = h2;
             h2.next = h3;
-            yingyong_01_03 y0103 = new yingyong_01_03();
-            ListNode newHead = y0103.reverse(head);
+            ListNode newHead = reverse(head);
             System.out.println(newHead.val);
 
             SequenceList seqList = new SequenceList(999);
@@ -42,7 +41,7 @@ public class yingyong_01_03 {
             seqList.add(3);
             seqList.add(4);
             seqList.add(6);
-            y0103.reverse(seqList);
+            reverse(seqList);
             System.out.println(seqList.table[0]);
         }
     }

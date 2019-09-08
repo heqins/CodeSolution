@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba9b5d4f-e0ba-4902-ad44-57e5ed8fc6a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/climbing_stairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/happy_number.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_03.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_04.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_04.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_05.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_05.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_06.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_06.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_07.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_07.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_07.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,20 +63,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.climbing_stairs">
-    <configuration name="climbing_stairs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="climbing_stairs" />
-      <module name="LeetCodeSolution" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="find_common_characters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Str.find_common_characters" />
+  <component name="RunManager" selected="Application.yingyong_01_09">
+    <configuration name="yingyong_01_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_01" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Str.*" />
+          <option name="PATTERN" value="DataStructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,19 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="happy_number" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="happy_number" />
-      <module name="LeetCodeSolution" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="intersection_of_two_arrays2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Array.intersection_of_two_arrays2" />
+    <configuration name="yingyong_01_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_02" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Array.*" />
+          <option name="PATTERN" value="DataStructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +90,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sum_of_two_integers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Array.sum_of_two_integers" />
+    <configuration name="yingyong_01_07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_07" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Array.*" />
+          <option name="PATTERN" value="DataStructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="yingyong_01_08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_08" />
+      <module name="LeetCodeSolution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="yingyong_01_09" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_09" />
+      <module name="LeetCodeSolution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.climbing_stairs" />
-        <item itemvalue="Application.happy_number" />
-        <item itemvalue="Application.find_common_characters" />
-        <item itemvalue="Application.intersection_of_two_arrays2" />
-        <item itemvalue="Application.sum_of_two_integers" />
+        <item itemvalue="Application.yingyong_01_09" />
+        <item itemvalue="Application.yingyong_01_07" />
+        <item itemvalue="Application.yingyong_01_08" />
+        <item itemvalue="Application.yingyong_01_01" />
+        <item itemvalue="Application.yingyong_01_02" />
       </list>
     </recent_temporary>
   </component>
@@ -131,6 +155,9 @@
       <workItem from="1567776651128" duration="1013000" />
       <workItem from="1567778032782" duration="1273000" />
       <workItem from="1567819760649" duration="1524000" />
+      <workItem from="1567910283244" duration="7856000" />
+      <workItem from="1567935004354" duration="305000" />
+      <workItem from="1567935884611" duration="3568000" />
     </task>
     <servers />
   </component>
@@ -157,6 +184,11 @@
           <url>file://$PROJECT_DIR$/src/Str/find_common_characters.java</url>
           <line>18</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DataStructure/yingyong_01_02.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
