@@ -52,21 +52,29 @@ public class yingyong_01_02 {
             return;
         }
 
-        int count = 0;
-        while (count < seqList.len) {
-            if ((int)seqList.table[count] >= s) {
+        int s_index = 0;
+        while (s_index < seqList.len) {
+            if ((int)seqList.table[s_index] >= s) {
                 break;
             }else {
-                count += 1;
+                s_index += 1;
             }
         }
 
-        System.out.println(count);
-        for (int i = count; i < (t - s); i++) {
-            seqList.table[i] = seqList.table[seqList.len - t + i - 1];
-            seqList.len -= 1;
+        int t_index = s_index;
+        while (t_index < seqList.len) {
+            if ((int)seqList.table[t_index] > t) {
+                break;
+            }else {
+                t_index += 1;
+            }
         }
 
+        while (t_index < seqList.len) {
+            seqList.table[s_index++] = seqList.table[t_index++];
+        }
+
+        seqList.len = s_index;
     }
 
     public static void main(String[] args) {
@@ -85,10 +93,12 @@ public class yingyong_01_02 {
         seqList.add(10);
         seqList.add(12);
 
-//        remove(seqList, 2, 5);
+        remove(seqList, 2, 10);
 //        insert(seqList, 5);
-        merge(seqList1, seqList2);
-        removeAll(seqList, 3);
-        System.out.println(seqList.table[2]);
+//        merge(seqList1, seqList2);
+//        removeAll(seqList, 3);
+//        System.out.println(seqList1.table[0]);
+        System.out.println(seqList.table[1]);
+        System.out.println(seqList.len);
     }
 }

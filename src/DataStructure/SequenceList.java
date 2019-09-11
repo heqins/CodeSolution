@@ -17,4 +17,15 @@ public class SequenceList {
         this.len += 1;
     }
 
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        sb.append(this.table[0]);
+        for (int i = 1; i < this.len; i++) {
+            sb.append("," + this.table[i]);
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
 }

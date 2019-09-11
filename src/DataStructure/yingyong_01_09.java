@@ -3,43 +3,46 @@ package DataStructure;
 public class yingyong_01_09 {
     public static void locate(DualNode head, int x) {
         DualNode p = head.next;
-
-        while (p.data != x) {
-            if (p == head) return;
+        DualNode q;
+        while (p != null && p.data != x) {
             p = p.next;
         }
-
-        p.freq += 1;
-
-        while (p.freq > p.prior.freq && p.prior != head) {
-            p.prior.prior.next = p;
-            p.prior = p.prior.prior;
-            p.prior.next = p.next;
-            p.next = p.prior;
-            p.next.prior = p.prior;
-            p.prior.prior = p;
+        if (p == null) {
+            System.out.println("不存在值为x的结点!");
+        }else {
+            p.freq++;
+            if (p.next != null) {
+                p.next.prior = p.prior;
+                p.prior.next = p.next;
+            }
+            q = p.prior;
+            while (q != head && q.freq < p.freq) {
+                q = q.prior;
+                p.next = q.next;
+                q.next.prior = p;
+                p.prior = q;
+                q.next = p;
+            }
         }
     }
 
     public static void main(String[] args) {
         DualNode head = new DualNode(-1);
         DualNode h2 = new DualNode(2);
-        DualNode h3 = new DualNode(3);
-        DualNode h4 = new DualNode(4);
-        head.prior = h3;
-        h3.next = head;
+        DualNode h3 = new DualNode(4);
+        DualNode h4 = new DualNode(5);
         head.next = h2;
         h2.prior = head;
         h2.next = h3;
         h3.prior = h2;
         h3.next = h4;
         h4.prior = h3;
-        h4.next = head;
         locate(head, 4);
-        locate(head, 3);
-        System.out.println(head.data);
-        System.out.println(head.next.data);
-        System.out.println(head.next.next.data);
-
+        locate(head, 5);
+        locate(head, 6);
+//        System.out.println(head.next.data);
+//        System.out.println(head.data);
+//        System.out.println(head.next.data);
+//        System.out.println(head.next.next.data);
     }
 }

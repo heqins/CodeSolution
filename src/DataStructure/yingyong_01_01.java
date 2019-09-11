@@ -48,8 +48,7 @@ public class yingyong_01_01 {
         seqList.add(-1);
 
         System.out.println(removeMin(seqList));
-        System.out.println(seqList.len);
-        System.out.println(seqList.table[3]);
+        System.out.println(seqList);
         System.out.println("--------");
 
         SequenceList seqList2 = new SequenceList(999);
@@ -60,8 +59,7 @@ public class yingyong_01_01 {
         seqList2.add(5);
 
         removeAll(seqList2, 1);
-        System.out.println(seqList2.len);
-        System.out.println(seqList2.table[0]);
+        System.out.println(seqList2);
         System.out.println("--------");
 
         SequenceList seqList3 = new SequenceList(999);
@@ -72,6 +70,6 @@ public class yingyong_01_01 {
         seqList3.add(5);
 
         removeDuplicate(seqList3);
-        System.out.println(seqList3.len);
+        System.out.println(seqList3);
     }
 }

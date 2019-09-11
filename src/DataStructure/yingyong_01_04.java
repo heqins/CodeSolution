@@ -35,7 +35,7 @@ public class yingyong_01_04 {
             head.next = h1;
             h1.next = h2;
             h2.next = h3;
-            System.out.println(getNode(head, 1).val);
+            System.out.println(getNode(head, 0).val);
             System.out.println(elemCount(head, 2));
         }
     }

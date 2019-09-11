@@ -4,8 +4,8 @@ public class yingyong_01_10 {
     public static ListNode merge(ListNode head1, ListNode head2) {
         ListNode p1 = head1;
         ListNode p2 = head2;
-        ListNode h3 = null;
-        ListNode p3 = null;
+        ListNode h3;
+        ListNode p3;
 
         if (p1.val <= p2.val) {
             h3 = p1;
@@ -56,6 +56,6 @@ public class yingyong_01_10 {
         head1.next = a2;
         a2.next = a3;
         head2.next = b2;
-        System.out.println(merge(head1, head2).next.val);
+        System.out.println(merge(head1, head2));
     }
 }

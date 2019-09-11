@@ -1,55 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba9b5d4f-e0ba-4902-ad44-57e5ed8fc6a0" name="Default Changelist" comment="">
+    <list default="true" id="52985e0e-0513-4940-83f0-464f948c767f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/ListNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/SequenceList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/SequenceList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_01.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_02.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_03.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_04.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_04.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_05.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_05.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_06.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_06.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_07.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_07.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_09.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_09.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/DataStructure/yingyong_01_10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeetCodeSolution/climbing_stairs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeetCodeSolution/climbing_stairs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/SequenceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/SequenceList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_04.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_05.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_09.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructure/yingyong_01_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructure/yingyong_01_10.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-  </component>
-  <component name="ProjectId" id="1Py6beWFxLVfGa3CZn2mc8c7kmC" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="DataStructure" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -77,8 +59,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="yingyong_01_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_02" />
+    <configuration name="yingyong_01_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_03" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
@@ -90,8 +72,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="yingyong_01_07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_07" />
+    <configuration name="yingyong_01_04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_04" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +85,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="yingyong_01_08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_08" />
+    <configuration name="yingyong_01_05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.yingyong_01_05" />
       <module name="LeetCodeSolution" />
       <extension name="coverage">
         <pattern>
@@ -132,10 +114,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.yingyong_01_09" />
-        <item itemvalue="Application.yingyong_01_07" />
-        <item itemvalue="Application.yingyong_01_08" />
+        <item itemvalue="Application.yingyong_01_05" />
         <item itemvalue="Application.yingyong_01_01" />
-        <item itemvalue="Application.yingyong_01_02" />
+        <item itemvalue="Application.yingyong_01_03" />
+        <item itemvalue="Application.yingyong_01_04" />
       </list>
     </recent_temporary>
   </component>
@@ -143,52 +125,20 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="ba9b5d4f-e0ba-4902-ad44-57e5ed8fc6a0" name="Default Changelist" comment="" />
-      <created>1566834062205</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1566834062205</updated>
-      <workItem from="1567045496870" duration="4742000" />
-      <workItem from="1567580404468" duration="7266000" />
-      <workItem from="1567772949310" duration="3138000" />
-      <workItem from="1567776651128" duration="1013000" />
-      <workItem from="1567778032782" duration="1273000" />
-      <workItem from="1567819760649" duration="1524000" />
-      <workItem from="1567910283244" duration="7856000" />
-      <workItem from="1567935004354" duration="305000" />
-      <workItem from="1567935884611" duration="3568000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Str/find_common_characters.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/DataStructure/yingyong_01_09.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DataStructure/yingyong_01_02.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/DataStructure/yingyong_01_09.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

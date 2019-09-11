@@ -33,7 +33,8 @@ public class yingyong_01_03 {
             h1.next = h2;
             h2.next = h3;
             ListNode newHead = reverse(head);
-            System.out.println(newHead.val);
+//            System.out.println(newHead.val);
+            System.out.println(newHead);
 
             SequenceList seqList = new SequenceList(999);
             seqList.add(1);
@@ -42,6 +43,6 @@ public class yingyong_01_03 {
             seqList.add(4);
             seqList.add(6);
             reverse(seqList);
-            System.out.println(seqList.table[0]);
+            System.out.println(seqList);
         }
     }
