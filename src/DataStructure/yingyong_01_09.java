@@ -8,20 +8,22 @@ public class yingyong_01_09 {
             p = p.next;
         }
         if (p == null) {
-            System.out.println("不存在值为x的结点!");
+            System.out.println("不存在值为" + x + "的结点!");
         }else {
             p.freq++;
-            if (p.next != null) {
-                p.next.prior = p.prior;
-                p.prior.next = p.next;
-            }
             q = p.prior;
             while (q != head && q.freq < p.freq) {
                 q = q.prior;
-                p.next = q.next;
-                q.next.prior = p;
+            }
+            if (q != p.prior) {
+                p.prior.next = p.next;
+                if (p.next != null) {
+                    p.next.prior = p.prior;
+                }
                 p.prior = q;
+                p.next = q.next;
                 q.next = p;
+                p.next.prior = p;
             }
         }
     }

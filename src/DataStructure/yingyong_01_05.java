@@ -45,7 +45,7 @@ public class yingyong_01_05 {
             h2.next = h3;
             insert(head, 45, 1);
 //            insert(head, 45, 2);
-            remove(head, 0);
+            remove(head, 4);
             System.out.println(head);
         }
     }

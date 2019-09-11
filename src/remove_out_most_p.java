@@ -8,7 +8,7 @@
  * 由于这个题需要让我们把最外层的括号去掉，所以，当count==0的时候，我们把结果增加的是[previ + 1, i)，左闭右开区间。
  */
 
-public class removeoutmostp {
+public class remove_out_most_p {
     public String removeOuterParentheses(String S) {
         int count = 0;
         int previ = 0;
@@ -28,7 +28,7 @@ public class removeoutmostp {
 
     public static void main(String[] args) {
         String test = "(()())(())(()(()))";
-        removeoutmostp r = new removeoutmostp();
+        remove_out_most_p r = new remove_out_most_p();
         System.out.println(r.removeOuterParentheses(test));
     }
 }
