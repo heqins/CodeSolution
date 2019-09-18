@@ -1,13 +1,19 @@
 package DataStructure;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class yingyong_02_08 {
     public int test() {
         int sum = 0;
-        Scanner s = new Scanner(System.in);
-        while (!s.hasNext("#")) {
-            sum += s.nextInt();
+        Stack<Integer> s = new Stack<>();
+        Scanner scan = new Scanner(System.in);
+        while (!scan.hasNext("#")) {
+            s.push(scan.nextInt());
+        }
+
+        while (!s.isEmpty()) {
+            sum += s.pop();
         }
         return sum;
     }

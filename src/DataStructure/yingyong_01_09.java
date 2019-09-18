@@ -41,9 +41,10 @@ public class yingyong_01_09 {
         h4.prior = h3;
         locate(head, 4);
         locate(head, 5);
-        locate(head, 6);
+        locate(head, 5);
+//        locate(head, 6);
 //        System.out.println(head.next.data);
-//        System.out.println(head.data);
+        System.out.println(head.next.freq);
 //        System.out.println(head.next.data);
 //        System.out.println(head.next.next.data);
     }
