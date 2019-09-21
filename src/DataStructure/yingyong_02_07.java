@@ -1,10 +1,12 @@
 package DataStructure;
 
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class yingyong_02_07 {
+    // 可以从杨辉三角可以知道，它的每个数等于它上方两数之和、每行第一个数和最后一个数都是1
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入行数：");
@@ -26,15 +28,21 @@ public class yingyong_02_07 {
             System.out.println();
         }
 
-        Queue<Integer> q = new PriorityQueue<>();
-        q.add(1);
-
-        for (int i = 2; i < n; i++) {
-            q.add(1);
-            for (int j = 1; j <= n - 2; j++) {
-                int temp = q.poll();
-
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(1);
+        q.offer(1);
+        int s = 0;
+        for (int i = 1; i <= n - 1; i++) {
+            q.offer(0);
+            for (int j = 1; j <= i + 2; j++) {
+                int v = q.poll();
+                q.offer(s + v);
+                s = v;
+                if (j != i + 2) {
+                    System.out.println(s);
+                }
             }
+            System.out.println("\n");
         }
     }
 }

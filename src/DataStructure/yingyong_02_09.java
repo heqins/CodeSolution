@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class yingyong_02_09 {
     private static int compute(char[] expression) {
+        // 负号问题， 连续减号问题
         Stack<Integer> sn = new Stack<>();
         Stack<Character> sop = new Stack<>();
 
@@ -18,9 +19,7 @@ public class yingyong_02_09 {
                 }
                 sop.push(c);
             } else if (c == '*' || c == '/') {
-                if (!sop.isEmpty()) {
-                    sop.push(c);
-                }
+                sop.push(c);
             } else if (c == ')') {
                 while (!sop.isEmpty() && sop.peek() != '(') {
                     int b = sn.pop();
@@ -33,8 +32,13 @@ public class yingyong_02_09 {
             }
         }
 
-        while (!sop.isEmpty()) {
+        System.out.println(sop.toString());
+        System.out.println(sn.toString());
 
+        while (!sop.isEmpty()) {
+            int b = sn.pop();
+            int a = sn.pop();
+            sn.push(getAnswer(a, sop.pop(), b));
         }
 
         return sn.peek();
@@ -58,6 +62,6 @@ public class yingyong_02_09 {
     }
 
     public static void main(String[] args) {
-        System.out.println(compute("2+3+(5*3)-(1+2*4/2)-3-1+9-9-(4*4)".toCharArray()));
+        System.out.println(compute("((3+5*2)+3)/5+(-6)/4*2+3".toCharArray()));
     }
 }
