@@ -1,7 +1,7 @@
 package DataStructure;
 
 public class yingyong_02_04 {
-    final static int MAX_SIZE = Integer.MAX_VALUE;
+    final static int MAX_SIZE = 999;
     private int[] stack;
     int top1 = -1;
     int top2 = MAX_SIZE;
