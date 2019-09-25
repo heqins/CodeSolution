@@ -5,9 +5,9 @@ public class yingyong_02_06 {
         private int front = -1;
         private int length;
         private int MAX_SIZE = 999;
-        int[] queue;
+        int[] elems;
         public SeqQueue2(){
-            this.queue = new int[MAX_SIZE];
+            this.elems = new int[MAX_SIZE];
             this.length = 0;
         }
     }
@@ -23,7 +23,7 @@ public class yingyong_02_06 {
         if (isFull(q)) {
             System.out.println("Queue Full!");
         }else {
-            q.queue[(q.front + 1) % q.MAX_SIZE] = x;
+            q.elems[(q.front + q.length) % q.MAX_SIZE] = x;
             q.length++;
         }
     }
@@ -33,7 +33,7 @@ public class yingyong_02_06 {
             System.out.println("Queue Empty!");
             return -1;
         }else {
-            int value = q.queue[q.front];
+            int value = q.elems[q.front];
             q.front = (q.front + 1) % q.MAX_SIZE;
             q.length--;
             return value;
