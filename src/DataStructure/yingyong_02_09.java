@@ -31,8 +31,8 @@ public class yingyong_02_09 {
             }
         }
 
-        System.out.println(sop.toString());
-        System.out.println(sn.toString());
+//        System.out.println(sop.toString());
+//        System.out.println(sn.toString());
 
         while (!sop.isEmpty()) {
             int b = sn.pop();
@@ -61,6 +61,6 @@ public class yingyong_02_09 {
     }
 
     public static void main(String[] args) {
-        System.out.println(compute("(1+2)*5+2+4-2*2".toCharArray()));
+        System.out.println(compute("(1+2)*5+2+4+(3*4+2)".toCharArray()));
     }
 }

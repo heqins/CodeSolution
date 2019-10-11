@@ -37,6 +37,7 @@ public class yingyong_02_10 {
         int top = -1;
         s[++top] = n1;
         while (top > -1) {
+            // tag == 0 -> ack(m,n)未求出
             if (s[top].tag == 0) {
                 if (s[top].m == 0) {
                     s[top].value = s[top].n + 1;
