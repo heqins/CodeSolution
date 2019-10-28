@@ -39,6 +39,6 @@ public class yingyong_03_03 {
     }
     public static void main(String[] args) {
         String S = "ABCABCAAA";
-        System.out.println(Arrays.toString(getFailure2(S)));
+        System.out.println(Arrays.toString(getFailure(S)));
     }
 }

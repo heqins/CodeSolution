@@ -21,7 +21,6 @@ public class yingyong_04_06 {
             if (cur.left != null) {
                 q.push(cur.left);
             }
-
             if (cur.right != null) {
                 q.push(cur.right);
             }
@@ -41,7 +40,7 @@ public class yingyong_04_06 {
         TreeNode l2 = new TreeNode(2);
         TreeNode l3 = new TreeNode(3);
 
-        root.left = l1;
+//        root.left = l1;
         root.right = l3;
         l1.left = l2;
 

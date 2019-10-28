@@ -86,10 +86,19 @@ public class yingyong_04_02 {
         TreeNode l1 = new TreeNode(1);
         TreeNode l2 = new TreeNode(2);
         TreeNode l3 = new TreeNode(3);
+        TreeNode l4 = new TreeNode(4);
+        TreeNode l5 = new TreeNode(5);
+        TreeNode l6 = new TreeNode(6);
+        TreeNode l7 = new TreeNode(7);
 
         root.left = l1;
-        root.right = l3;
+//        root.right = l3;
         l1.right = l2;
+        l2.left = l3;
+        l3.left = l4;
+        l3.right = l5;
+        l4.left = l6;
+        l5.right = l7;
 
         PostOrderTraversal(root);
         System.out.println("------------------");

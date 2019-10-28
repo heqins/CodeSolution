@@ -18,7 +18,7 @@ public class yingyong_03_02 {
     }
 
     public static void main(String[] args) {
-        String test = new String("Hello World! I'm your nightmare.");
+        String test = new String("Hello World!");
         frequency(test);
     }
 }
