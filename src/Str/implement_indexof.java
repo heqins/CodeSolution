@@ -46,7 +46,7 @@ public class implement_indexof {
         return kmp(haystack, needle);
     }
 
-    public int strStr2(String haystack, String needle) {
+    public static int strStr2(String haystack, String needle) {
         if (needle == null || needle.length() == 0) return 0;
         int nLength = needle.length();
         for (int i = 0; i < haystack.length() - nLength + 1; i ++) {
@@ -54,5 +54,11 @@ public class implement_indexof {
             if (possNeedle.equals(needle)) return i;
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        String s = "aaabbba";
+        String p = "abb";
+        System.out.println(strStr2(s, p));
     }
 }
