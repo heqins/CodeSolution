@@ -1,6 +1,6 @@
 package BinaryTree;
 
-public class range_sum_BST {
+public class range_sum_bst {
     class TreeNode {
       int val;
       TreeNode left;

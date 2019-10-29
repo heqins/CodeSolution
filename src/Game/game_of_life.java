@@ -1,3 +1,5 @@
+package Game;
+
 public class game_of_life {
     /**
      * 最后对所有状态对2取余，则状态0和2就变成死细胞，状态1和3就是活细胞，达成目的。

@@ -1,3 +1,5 @@
+package DP;
+
 public class climbing_stairs {
     public int climbStairs2(int n) {
         return climb_stairs(0, n);
