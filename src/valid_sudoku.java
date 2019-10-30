@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class valid_sudoku {
+    public boolean isValidSudoku(char[][] board) {
+        int [] vset = new int [9];
+        int [] hset = new int [9];
+        int [] bckt = new int [9];
+        int idx = 0;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != '.') {
+                    idx = 1 << (board[i][j] - '0') ;
+                    if ((hset[i] & idx) > 0 ||
+                            (vset[j] & idx) > 0 ||
+                            (bckt[(i / 3) * 3 + j / 3] & idx) > 0) return false;
+                    hset[i] |= idx;
+                    vset[j] |= idx;
+                    // 子九宫格
+                    bckt[(i / 3) * 3 + j / 3] |= idx;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+    }
+}
