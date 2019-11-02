@@ -1,4 +1,4 @@
-public class merge_two_sorted_list {
+public class merge_two_sorted_lists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;
@@ -37,7 +37,7 @@ public class merge_two_sorted_list {
         head1.next = a2;
         a2.next = a3;
         head2.next = b2;
-        merge_two_sorted_list mt = new merge_two_sorted_list();
+        merge_two_sorted_lists mt = new merge_two_sorted_lists();
         System.out.println(mt.mergeTwoLists(head1, head2).next.next.val);
     }
 }
