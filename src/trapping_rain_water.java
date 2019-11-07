@@ -1,25 +1,24 @@
 import java.util.Stack;
 
 public class trapping_rain_water {
-    public static int trap(int[] A) {
-        Stack<Integer> stack = new Stack<Integer>();
-        int sum = 0;
-        int pre = 0;
-        int i = -1;
-        while(++i < A.length){
-            if(A[i]==0){pre = 0;continue;}
-            while(!stack.isEmpty() && A[i] >= A[stack.peek()]){
-                // pre??????
-                sum += (A[stack.peek()] - pre) * (i-stack.peek()-1);
-                pre = A[stack.pop()];
+    public static int trap(int[] height) {
+        int left = 0;
+        int leftMax = 0;
+        int right = height.length - 1;
+        int rightMax = 0;
+        int res = 0;
+        while (left < right) {
+            if (height[left] < height[right]) {
+                leftMax = Math.max(height[left], leftMax);
+                res += leftMax - height[left];
+                left++;
+            }else {
+                rightMax = Math.max(height[right], rightMax);
+                res += rightMax - height[right];
+                right--;
             }
-            if(!stack.isEmpty()){
-                sum += (A[i] - pre) * (i-stack.peek()-1);
-                pre = A[i];
-            }
-            stack.push(i);
         }
-        return sum;
+        return res;
     }
 
     public static void main(String[] args) {
