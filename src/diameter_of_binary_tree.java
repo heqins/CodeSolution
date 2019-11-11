@@ -7,6 +7,7 @@
  */
 
 public class diameter_of_binary_tree {
+    // 类似 binary_tree_maximum_path_sum
     int maxNum;
     public int diameterOfBinaryTree(TreeNode root) {
         if (root == null || (root.right == null && root.left == null)) {
