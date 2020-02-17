@@ -26,9 +26,15 @@ Note:
 
 The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
 You may assume that there are no duplicate edges in the input prerequisites.
+
+This is a simple method to detect a cycle using dfs. This method basically checks if a back edge exists in the graph. Its a simple 2 step process.
+Step 1: construct a graph out of the prerequesite array.
+Step 2 : perform dfs. While performing dfs, keep track of the current vertex being explored in the recursion in an array say currentStack. If we encounter a vertex which is already in the currentStack, it means there is a loop in the graph.
+
 **/
 
 public class course_schedule {
+  // DFS
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
         List<Integer> graph[] = new ArrayList[numCourses];
@@ -51,6 +57,7 @@ public class course_schedule {
     }
 
     private boolean isCycle(List<Integer> adj[], boolean[] visited, boolean[] currentStack, int start) {
+      // currentStack-visiting
         visited[start] = true;
         currentStack[start] = true;
         Iterator<Integer> it = adj[start].iterator();
