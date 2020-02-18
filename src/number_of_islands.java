@@ -18,6 +18,7 @@ public class number_of_islands {
     }
 
     public void DFSMarking(char[][] grid, int i , int j) {
+        // >=判断以及grid[i][j] != '1' 防止溢出
         if (i < 0 || j < 0 || i >= n || j >= m || grid[i][j] != '1') return;
         grid[i][j] = '0';
 
