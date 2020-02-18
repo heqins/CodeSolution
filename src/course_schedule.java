@@ -58,6 +58,7 @@ public class course_schedule {
 
     private boolean isCycle(List<Integer> adj[], boolean[] visited, boolean[] currentStack, int start) {
       // currentStack-visiting
+      // 为了保证内存不溢出，将visited[start]设为true，在后面进行条件判断提前结束循环
         visited[start] = true;
         currentStack[start] = true;
         Iterator<Integer> it = adj[start].iterator();
