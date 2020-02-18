@@ -7,6 +7,8 @@ public class longest_increasing_path_in_a_matrix {
         // corner case
         if (matrix == null || matrix.length == 0) return 0;
         int m = matrix.length, n = matrix[0].length;
+        // 其中dp[i][j]表示数组中以(i,j)为起点的最长递增路径的长度，初始将dp数组都赋为0，
+        // 当我们用递归调用时，遇到某个位置(x, y), 如果dp[x][y]不为0的话，我们直接返回dp[x][y]即可，不需要重复计算
         int[][] memo = new int[m][n];
 
         int res = 1;
@@ -33,7 +35,7 @@ public class longest_increasing_path_in_a_matrix {
             int len = 1 + dfs(matrix, x, y, m, n, memo);
             max = Math.max(max, len);
         }
-        // i, j存的是能取到的最长的递增路径长度
+        // i, j存的是能取到的最长的递增路径长度(从i,j出发)
         memo[i][j] = max;
         return max;
     }
