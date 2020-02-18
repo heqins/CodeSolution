@@ -7,6 +7,7 @@ public class symmetric_tree {
     }
 
     public boolean helper(TreeNode t1, TreeNode t2) {
+        // 必须先判断都为空的情况否则或条件会将正确的也视为错误
         if (t1 == null && t2 == null) return true;
         if (t1 == null || t2 == null) return false;
 
