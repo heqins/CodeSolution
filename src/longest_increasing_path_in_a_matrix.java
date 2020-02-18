@@ -26,6 +26,7 @@ public class longest_increasing_path_in_a_matrix {
         int max = 1;
         for (int k = 0; k < 4; k++) {
             int x = i + dx[k], y = j +dy[k];
+            // 写或条件时要注意顺序，x,y有可能出边界！
             if (x < 0 || x >= m || y < 0 || y >= n || matrix[x][y] <= matrix[i][j]) {
                 continue;
             }
