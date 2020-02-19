@@ -40,52 +40,43 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
 *//
 
 public class word_ladder {
+    // 单词阶梯
+    /**
+    The first intuition for this problem is to build a graph whose nodes represent strings and edges connect strings that are only 1 character apart, and then we apply BFS from the startWord node. If we find the endWord, we return the level count of the bfs. This intuition is correct, but there are some places that we can save time.
+
+    When we build adjacency list graph, we don't use two loops to check every pair of string to see if they are 1 character apart. Instead, we make changes to current string to obtain all the strings we can reach from current node, and see if it is in the wordList. Thus, there are currentString.length() * 25 case we need to check for every node. This is faster when the wordList set is large, since the check-every-pair method need wordList.size() * currentString.length() for each node. Otherwise, your may exceed the running time limit.
+
+    For the strings we visited, we remove it from the wordList. This way we don't need to mark visited using another HashSet or something.
+
+    Actually, we don't even need to build the adjacency list graph explicitly using a HashMap<String, ArrayList>, since we keep all the nodes we can reach in the queue of each level of BFS. This can be seen as the keys of the HashMap are the strings that in the queue, and values are the strings that satisfy the 1 character apart in the wordList. Thus, we avoid the time cost of build map for those nodes we don't need to visit.
+    **/
+    
     public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        if(!wordList.contains(endWord)) return 0;
-        Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
-
-        int len = 1;
-        int strLen = beginWord.length();
-        HashSet<String> visited = new HashSet<String>();
-
-        beginSet.add(beginWord);
-        endSet.add(endWord);
-        while (!beginSet.isEmpty() && !endSet.isEmpty()) {
-            if (beginSet.size() > endSet.size()) {
-                Set<String> set = beginSet;
-                beginSet = endSet;
-                endSet = set;
-            }
-
-            Set<String> temp = new HashSet<String>();
-            for (String word : beginSet) {
-                char[] chs = word.toCharArray();
-
-                for (int i = 0; i < chs.length; i++) {
-                    for (char c = 'a'; c <= 'z'; c++) {
-                        char old = chs[i];
-                        chs[i] = c;
-                        String target = String.valueOf(chs);
-
-                        if (endSet.contains(target)) {
-                            return len + 1;
-                        }
-
-                        if (!visited.contains(target) && wordList.contains(target)) {
-                            temp.add(target);
-                            visited.add(target);
-                        }
-
-                        chs[i] = old;
+       wordList.add(endWord);
+       Queue<String> queue = new LinkedList<String>();
+       queue.add(beginWord);
+       int level = 0;
+       while(!queue.isEmpty()){
+           int size = queue.size();
+            for(int i = 0; i < size; i++){
+                String cur = queue.remove();
+                if(cur.equals(endWord)){ return level + 1;}
+                for(int j = 0; j < cur.length(); j++){
+                    char[] word = cur.toCharArray();
+                    for(char ch = 'a'; ch < 'z'; ch++){
+                        word[j] = ch;
+                        String check = new String(word);
+                        if(!check.equals(cur) && wordList.contains(check)){
+                            queue.add(check);
+                           wordList.remove(check);
                     }
                 }
             }
-
-            beginSet = temp;
-            len++;
         }
-
-        return 0;
+        level++;
+    }
+    return 0;
+}
     }
 
     public static void main(String[] args) {
