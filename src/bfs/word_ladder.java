@@ -51,34 +51,42 @@ public class word_ladder {
     Actually, we don't even need to build the adjacency list graph explicitly using a HashMap<String, ArrayList>, since we keep all the nodes we can reach in the queue of each level of BFS. This can be seen as the keys of the HashMap are the strings that in the queue, and values are the strings that satisfy the 1 character apart in the wordList. Thus, we avoid the time cost of build map for those nodes we don't need to visit.
     **/
     
-    public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
-       wordList.add(endWord);
-       Queue<String> queue = new LinkedList<String>();
-       queue.add(beginWord);
-       int level = 0;
-       while(!queue.isEmpty()){
-           int size = queue.size();
-            for(int i = 0; i < size; i++){
-                String cur = queue.remove();
-                if(cur.equals(endWord)){ return level + 1;}
-                for(int j = 0; j < cur.length(); j++){
-                    char[] word = cur.toCharArray();
-                    for(char ch = 'a'; ch < 'z'; ch++){
-                        word[j] = ch;
-                        String check = new String(word);
-                        if(!check.equals(cur) && wordList.contains(check)){
-                            queue.add(check);
-                           wordList.remove(check);
-                    }
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        if (!wordList.contains(endWord)) return 0;
+        HashSet<String> set = new HashSet<String>(wordList);
+        Queue<String> q = new LinkedList<String>();
+        int length = 0;
+        set.add(endWord);
+        q.add(beginWord);
+        
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                String w = q.poll();
+                if (w.equals(endWord)) return length + 1;
+                wordMatch(w, set, q);
+            }
+            length++;
+        }
+        return 0;
+    }
+    
+    public void wordMatch(String w, Set<String> set, Queue<String> q) {
+        for (int i = 0; i < w.length(); i++) {
+            char[] word = w.toCharArray();
+            for (int j = 0; j < 26; j++) {
+                char c = (char) ('a' + j);
+                if (word[i] == c) continue;
+                word[i] = c;
+                String s = String.valueOf(word);
+                if (set.contains(s)) {
+                    set.remove(s);
+                    q.offer(s);
                 }
             }
         }
-        level++;
     }
-    return 0;
-}
-    }
-
+  
     public static void main(String[] args) {
         String beginWord = "hit";
         String endWord = "cog";
