@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class perfect_squares {
     public int numSquares(int n) {
+        // dp[i]表示到i时最少的平方数个数
         int[] dp = new int[n + 1];
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
