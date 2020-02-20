@@ -30,6 +30,8 @@ Output: 28
 public class uniqure_paths {
     public static int uniquePaths(int m, int n) {
         int[][] map = new int[m][n];
+        
+        // 边界处都只有一种路线，所有都初始化为1
         for (int i = 0; i < m; i++) {
             map[i][0] = 1;
         }
