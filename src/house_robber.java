@@ -9,6 +9,8 @@ public class house_robber {
         //We can infer the formula from problem:mark[i]=max(num[i]+mark[i-2],mark[i-1])
         //so initialize two nums at first.
         mark[0] = nums[0];
+        // 在每一步有两种选择:偷当前房子放弃相邻的房子，或者偷相邻的房子
+        // 第一个房子能偷到的最大值是第零个和第一个之中大的
         mark[1] = Math.max(nums[0], nums[1]);
 
         //Using Dynamic Programming to mark the max money in loop.
