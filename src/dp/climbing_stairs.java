@@ -16,6 +16,7 @@ public class climbing_stairs {
     }
 
     public int climbStairs(int n) {
+        // 为什么初始化为n+1大小的数组？
         int[] dp = new int[n + 1]; // save all caculated values
         dp[0] = 1; // base case
         dp[1] = 1; // base case
