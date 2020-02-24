@@ -65,6 +65,8 @@ class Solution {
                 sp = match;
             }else return false;
         }
+        
+        // s已经匹配完了，p还剩*的情况
         while (pp < p.length() && p.charAt(pp) == '*') {
             pp++;
         }
