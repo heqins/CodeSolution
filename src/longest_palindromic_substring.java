@@ -1,3 +1,4 @@
+// 最大回文子字符串 https://www.bilibili.com/video/av78107789?from=search&seid=9372089928080728246
 public class longest_palindromic_substring {
     private int index;
     private int maxLen;
@@ -5,8 +6,9 @@ public class longest_palindromic_substring {
         if (s.length() < 2) return s;
 
         for (int i = 0; i < s.length(); i++) {
-            helper(s, i, i); // palindrome odd
-            helper(s, i, i + 1);
+            // 每一个当作中心
+            helper(s, i, i); // palindrome odd, 以当前字符串为中心是否存在回文
+            helper(s, i, i + 1); 
         }
 
         return s.substring(index, index + maxLen);
