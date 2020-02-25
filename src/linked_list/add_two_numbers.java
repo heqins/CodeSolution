@@ -12,6 +12,7 @@ public class add_two_numbers {
         int carry = 0;
         while (l1 != null && l2 != null) {
             ListNode temp = new ListNode((l1.val + l2.val + carry) % 10);
+            // 判断是否进位
             carry = (l1.val + l2.val + carry) / 10;
             curr.next = temp;
             l1 = l1.next;
@@ -20,6 +21,7 @@ public class add_two_numbers {
         }
         while (l1 != null) {
             ListNode temp = new ListNode((l1.val + carry) % 10);
+            // 单链依然有可能要进位
             carry = (l1.val + carry) / 10;
             curr.next = temp;
             l1 = l1.next;
