@@ -16,3 +16,18 @@ return 13.
 Note:
 You may assume k is always valid, 1 ≤ k ≤ n2.
 **/
+
+public int kthSmallest(int[][] matrix, int k) {
+	PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, Collections.reverseOrder());
+	for (int[] row : matrix) {
+		for (int cell : row) {
+			maxHeap.add(cell);
+			if (maxHeap.size() > k) {
+				maxHeap.poll();
+			}
+		}
+	}
+	return maxHeap.poll();
+}
+
+
