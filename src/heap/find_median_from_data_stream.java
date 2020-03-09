@@ -12,6 +12,7 @@
 
 class MedianFinder {
     // max queue is always larger or equal to min queue
+    // PriorityQueue默认是最小堆
     PriorityQueue<Integer> min = new PriorityQueue();
     PriorityQueue<Integer> max = new PriorityQueue(1000, Collections.reverseOrder());
     // Adds a number into the data structure.
