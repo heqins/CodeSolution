@@ -26,6 +26,9 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 **/
 
 class Solution {
+    // [a, b, c, d, e, f]
+    // a < b < c < d > e < f
+    // b - a + c - b + d - c + f - e 
     public int maxProfit(int[] prices) {
         int profit = 0;
         for (int i = 1; i < prices.length; i++) {
