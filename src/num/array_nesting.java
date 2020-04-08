@@ -49,3 +49,25 @@ class Solution {
         return len;
     }
 }
+/**
+下面这种解法是网友 @edyyy 提醒博主的，可以优化解法二的空间，我们并不需要专门的数组来记录数组是否被遍历过，
+而是在遍历的过程中，将其交换到其应该出现的位置上，因为如果某个数出现在正确的位置上，那么它一定无法组成嵌套数组，
+这样就相当于我们标记了其已经访问过了，思路确实很赞啊，参见代码如下：
+
+class Solution {
+public:
+    int arrayNesting(vector<int>& nums) {
+        int n = nums.size(), res = 0;
+        for (int i = 0; i < n; ++i) {
+            int cnt = 1;
+            while (nums[i] != i) {
+                swap(nums[i], nums[nums[i]]);
+                ++cnt;
+            }
+            res = max(res, cnt);
+        }
+        return res;
+    }
+};
+**/
+
