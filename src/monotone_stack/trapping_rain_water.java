@@ -43,3 +43,23 @@ public class trapping_rain_water {
         System.out.println(trap(A));
     }
 }
+
+// 利用单调栈来做
+class Solution {
+    public int trap(int[] height) {
+        Stack<Integer> stack = new Stack<>();
+        int i = 0, n = height.length, res = 0;
+        
+        while (i < n) {
+            if (stack.isEmpty() || height[i] < height[stack.peek()]) {
+                stack.push(i++);
+            } else {
+                int mid = stack.pop();
+                if (stack.isEmpty()) continue;
+                
+                res += (i - stack.peek() - 1) * (Math.min(height[stack.peek()], height[i]) - height[mid]);
+            }
+        }
+        return res;
+    }
+}
