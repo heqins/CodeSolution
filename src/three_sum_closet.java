@@ -14,6 +14,7 @@ import java.util.Arrays;
 
 public class three_sum_closet {
     public int threeSumClosest(int[] nums, int target) {
+        // 不要忘了进行排序
         Arrays.sort(nums);
         int res = nums[0] + nums[1] + nums[nums.length-1];
         for (int i = 0; i < nums.length - 2; i++) {
