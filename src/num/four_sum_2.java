@@ -38,6 +38,7 @@ public class four_sum_2 {
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < B.length; j++) {
                 int sum = A[i] + B[j];
+                // api是containsKey
                 if (sums.containsKey(sum)) {
                     sums.put(sum, sums.get(sum) + 1);
                 } else {
