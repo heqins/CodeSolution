@@ -53,8 +53,9 @@ public class three_sum {
 
         HashSet<List<Integer>> hset = new HashSet<>();
         Arrays.sort(nums);
-
-        for (int i = 0; i < nums.length - 3; i++) {
+        
+        //　注意等号
+        for (int i = 0; i <= nums.length - 3; i++) {
             int mid = i + 1;
             int end = nums.length - 1;
             while (mid < end) {
@@ -69,6 +70,7 @@ public class three_sum {
                         hset.add(temp);
                         res.add(temp);
                     }
+                  　// 注意mid++,end--
                     mid++;
                     end--;
                 }else if (sum > 0) {
