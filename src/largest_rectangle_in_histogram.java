@@ -22,8 +22,21 @@
 此时根据矮板子的高度算长度为2的矩形面积，以此类推，直到数字大于栈顶元素为止，再次进栈，巧妙的一比！
 **/
 
-public class largest_rectangle_in_histogram {
-    public int largestRectangleArea(int[] heights) {
-        return -1;
+// 递增栈：遇到小于栈顶的进行操作，大于栈顶入栈
+ public int largestRectangleArea(int[] heights) {
+        int len = heights.length;
+        Stack<Integer> s = new Stack<>();
+        int maxArea = 0;
+        for (int i = 0; i <= len; i++){
+            int h = (i == len ? 0 : heights[i]);
+            if (s.isEmpty() || h >= heights[s.peek()]) {
+                s.push(i);
+            } else {
+                int tp = s.pop();
+                maxArea = Math.max(maxArea, heights[tp] * (s.isEmpty() ? i : i - 1 - s.peek()));
+                i--;
+            }
+        }
+        return maxArea;
     }
 }
