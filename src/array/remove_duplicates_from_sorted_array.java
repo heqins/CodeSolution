@@ -35,6 +35,11 @@ for (int i = 0; i < len; i++) {
 }
 **/
 
+/**
+这里也可以换一种写法，用变量i表示当前覆盖到到位置，由于不能有重复数字，则只需要用当前数字 num 跟上一个覆盖到到数字 nums[i-1] 做个比较，
+只要 num 大，则一定不会有重复（前提是数组必须有序）
+**/
+
 import java.util.Arrays;
 
 public class remove_duplicates_from_sorted_array {
