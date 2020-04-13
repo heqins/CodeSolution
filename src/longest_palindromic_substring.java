@@ -1,3 +1,17 @@
+/**
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+
+Example 1:
+
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+Example 2:
+
+Input: "cbbd"
+Output: "bb"
+**/
+
 // 最大回文子字符串 https://www.bilibili.com/video/av78107789?from=search&seid=9372089928080728246
 public class longest_palindromic_substring {
     private int index;
