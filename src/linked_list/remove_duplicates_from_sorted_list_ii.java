@@ -46,7 +46,7 @@ class Solution {
                 pre = pre.next;
             }
         }
-        
-        return head;
+        // 不能return head，有可能链头是重复元素
+        return dummy.next;
     }
 }
