@@ -59,14 +59,20 @@ public class divide_two_integers {
     }
 
     public long divide(long ldividend, long ldivisor) {
-        if (ldividend < ldivisor) return 0;
-        long sum = ldivisor;
-        long multiple = 1;
-        while ((sum + sum) < ldividend) {
-            sum += sum;
-            multiple += multiple;
+        // Recursion exit condition
+	    if (ldividend < ldivisor) return 0;
+	
+	    //  Find the largest multiple so that (divisor * multiple <= dividend), 
+	    //  whereas we are moving with stride 1, 2, 4, 8, 16...2^n for performance reason.
+	    //  Think this as a binary search.
+	    long sum = ldivisor;
+	    long multiple = 1;
+	    while ((sum+sum) <= ldividend) {
+		    sum += sum;
+		    multiple += multiple;
         }
-        return multiple + divide(ldividend - sum, ldivisor);
+	    //Look for additional value for the multiple from the reminder (dividend - sum) recursively.
+	    return multiple + ldivide(ldividend - sum, ldivisor);
     }
 
     public static void main(String[] args) {
