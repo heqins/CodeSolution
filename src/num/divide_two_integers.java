@@ -58,7 +58,7 @@ public class divide_two_integers {
         return sign == 1 ? (int)lres : -(int)lres;
     }
 
-    public long divide(long ldividend, long ldivisor) {
+    public long ldivide(long ldividend, long ldivisor) {
         // Recursion exit condition
 	if (ldividend < ldivisor) return 0;
 	
