@@ -36,6 +36,8 @@ There are two ways to reach the bottom-right corner:
 
 **/
 
+// testcase: [[1]] -> expected: 0
+
 class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         if (obstacleGrid == null || obstacleGrid.length == 0) return 0;
