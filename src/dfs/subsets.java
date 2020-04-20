@@ -33,6 +33,7 @@ class Solution {
                 helper(result, list, nums, k - 1, i + 1);
                 list.remove(list.size() - 1);
             }
+            // 用来添加空集合？
             result.add(new ArrayList<Integer>(list));
         }
     }
