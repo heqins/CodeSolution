@@ -25,6 +25,45 @@ return its zigzag level order traversal as:
 
 **/
 
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        
+        if (root == null) return res;
+        
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+        int count = 0;
+        while (!q.isEmpty()) {
+            List<Integer> temp = new ArrayList<>();
+            int size = q.size();
+            
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = q.poll();
+                if (cur.left != null) q.offer(cur.left);
+                if (cur.right != null) q.offer(cur.right);
+                temp.add(cur.val);
+            }
+            if (count % 2 != 0) Collections.reverse(temp);
+            count++;
+            res.add(temp);
+        }
+        
+        return res;
+    }
+}
+
+
+
 import java.util.*;
 
 public class binary_tree_zigzag_level_order_traversal {
