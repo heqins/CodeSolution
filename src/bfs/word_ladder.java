@@ -94,3 +94,59 @@ public class word_ladder {
         System.out.println(ladderLength(beginWord, endWord, wordList));
     }
 }
+
+// 双端dfs
+// TLE caused by searching whether target already exists in the wordList if (!visited.contains(target) && wordList.contains(target)) {...}as the contains() consumes O(n) time, converting the input to Set<> would solve it
+
+class Solution {
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
+        
+        int len = 1;
+        int strLen = beginWord.length();
+        
+        beginSet.add(beginWord);
+        endSet.add(endWord);
+        
+        if(!wordList.contains(endWord)) return 0;
+
+        Set<String> visited = new HashSet<String>();
+        Set<String> dict = new HashSet<>(wordList);
+        
+        while (!beginSet.isEmpty() && !endSet.isEmpty()) {
+            if (beginSet.size() > endSet.size()) {
+                Set<String> t = beginSet;
+                beginSet = endSet;
+                endSet = t;
+            }
+            
+            Set<String> temp = new HashSet<String>();
+            for (String word: beginSet) {
+                char[] chs = word.toCharArray();
+                
+                for (int i = 0; i < chs.length; i++) {
+                    for (char c = 'a'; c <= 'z'; c++) {
+                        char old = chs[i];
+                        chs[i] = c;
+                        
+                        String target = String.valueOf(chs);
+                        
+                        if (endSet.contains(target)) return len + 1;
+
+                        if (dict.contains(target) && !visited.contains(target)) {
+                            visited.add(target);
+                            temp.add(target);
+                        }
+                        
+                        chs[i] = old;
+                    }
+                }
+            }
+            
+            beginSet = temp;
+            len++;
+        }
+        
+        return 0;
+    }
+}
