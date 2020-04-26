@@ -20,6 +20,18 @@ The input strings only contain lower case letters.
 The length of both given strings is in range [1, 10,000].
 **/
 
+/**
+Here is a sliding window solution:
+
+Count occurences of all characterers of s1. You can imagine every unique character count as a little stack, and you have 26 stacks, some of them empty. These are the characters and counts you need to match in s2 substrings.
+
+Go through the s2 substrings using a sliding window of size len(s1), modifying your counts on every step based on what character you remove from the left and what character you add from the right. Notice counts may go negative if you add unnecessary characters.
+
+If at any point in time your counts are all zero (stacks are empty), then you have found a solution, return true
+
+If you reached the end of s2, there is no solution, so return false.
+**/
+
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
         if (s1.length() > s2.length()) return false; //s2 is a shortie
