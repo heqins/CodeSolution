@@ -62,6 +62,7 @@ i和j的位置关系很重要，如果i和j相等了，则 dp[i][j] 肯定是 tr
 
 **/
 
+// https://www.bilibili.com/video/BV1NJ411v7k9?from=search&seid=13100635538009772270
 class Solution {
     public int minCut(String s) {
         if (s.length() == 0) return 0;
