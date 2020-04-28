@@ -47,3 +47,21 @@ class Solution {
         return nums[left];
     }
 }
+
+/**
+下面这种分治法 Divide and Conquer 的解法，由热心网友 howard144 提供，这里每次将区间 [start, end] 从中间 mid 位置分为两段，
+
+分别调用递归函数，并比较返回值，每次取返回值较小的那个即可，参见代码如下：
+
+**/
+class Solution {
+public:
+    int findMin(vector<int>& nums) {
+        return helper(nums, 0, (int)nums.size() - 1);
+    }
+    int helper(vector<int>& nums, int start, int end) {
+        if (nums[start] <= nums[end]) return nums[start];
+        int mid = (start + end) / 2;
+        return min(helper(nums, start, mid), helper(nums, mid + 1, end));
+    }
+};
