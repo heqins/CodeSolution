@@ -1,4 +1,11 @@
 /**
+Write a program to find the node at which the intersection of two singly linked lists begins.
+
+For example, the following two linked lists:
+**/
+
+
+/**
  * 方法2：判断两个链表相交的第一个结点：用到快慢指针，推荐（更优解）
  *
  * 我们在上面的方法2中，之所以用到栈，是因为我们想同时遍历到达两个链表的尾结点。
