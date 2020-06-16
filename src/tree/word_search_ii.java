@@ -26,6 +26,7 @@ The values of words are distinct.
 Accepted
 **/
 
+// Backtracking + Trie
 public List<String> findWords(char[][] board, String[] words) {
     List<String> res = new ArrayList<>();
     TrieNode root = buildTrie(words);
