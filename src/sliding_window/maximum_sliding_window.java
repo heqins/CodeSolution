@@ -34,19 +34,21 @@ Constraints:
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int len = nums.length;
-    int[] result = new int[len - k + 1];
-    if(nums.length == 0) return new int[0];
-    Queue<Integer> queue = new PriorityQueue<Integer>(len, Collections.reverseOrder());
+        int[] result = new int[len - k + 1];
+        if(nums.length == 0) return new int[0];
     
-    for(int i = 0; i < k; i ++){
-        queue.add(nums[i]);
-    }
-    result[0] = queue.peek();
-    for(int i = k; i < len; i ++){
-        queue.remove(nums[i - k]);
-        queue.add(nums[i]);
-        result[i - k + 1] = queue.peek();
-    }
+        // PriorityQueue最小堆
+        Queue<Integer> queue = new PriorityQueue<Integer>(len, Collections.reverseOrder());
+    
+        for(int i = 0; i < k; i ++){
+           queue.add(nums[i]);
+        }
+        result[0] = queue.peek();
+        for(int i = k; i < len; i ++){
+            queue.remove(nums[i - k]);
+            queue.add(nums[i]);
+            result[i - k + 1] = queue.peek();
+        }
    
         return result;
     }
