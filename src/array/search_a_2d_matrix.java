@@ -25,6 +25,7 @@ target = 13
 Output: false
 **/
 
+// 每次要从右上角或左下角开始搜索，否则无法选出下一步的方向
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0) return false;
