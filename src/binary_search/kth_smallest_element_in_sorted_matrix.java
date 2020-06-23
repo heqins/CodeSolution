@@ -1,4 +1,4 @@
-public class kth_smallest_element_in_sorted_array {
+public class kth_smallest_element_in_sorted_matrix {
     public static int kthSmallest(int[][] matrix, int k) {
         // Binary Search
         int m = matrix.length, n = matrix[0].length;
