@@ -21,6 +21,8 @@ This is a follow up problem to Find Minimum in Rotated Sorted Array.
 Would allow duplicates affect the run-time complexity? How and why?
 **/
 
+// 在排序数组中查找数字 I
+
 /**
 这道寻找旋转有序重复数组的最小值是之前那道 Find Minimum in Rotated Sorted Array 的拓展，当数组中存在大量的重复数字时，
 
