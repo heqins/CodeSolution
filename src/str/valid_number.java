@@ -8,6 +8,17 @@
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 **/
 
+/**
+[]  ： 字符集合
+()  ： 分组，在这里是为了让表达式更清晰
+?   ： 重复 0 ~ 1 次
++   ： 重复 1 ~ n 次
+*   ： 重复 0 ~ n 次
+.   ： 任意字符
+\\. ： 转义后的 .
+\\d ： 任意数字
+**/
+
 class Solution {
     public boolean isNumber(String s) {
         if (s.length() < 0 || s == null) return false;
