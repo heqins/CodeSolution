@@ -15,6 +15,16 @@ Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 **/
 
+
+/**
+比如我们计算n面积的时候，假如左侧的线段高度比右侧的高度低，那么我们通过左移右指针来将长度缩短为n-1的做法是没有意义的，
+因为`新的形成的面积变成了(n-1) * heightOfLeft 这个面积一定比刚才的长度为n的面积nn * heightOfLeft 小`
+
+也就是说最大面积`一定是当前的面积或者通过移动短的线段得到`。
+关键点：
+- 双指针优化时间复杂度
+**/
+
 public class container_with_most_water {
     public int maxArea(int[] height) {
         if (height == null || height.length == 0) return 0;
