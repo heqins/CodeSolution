@@ -1,0 +1,13 @@
+.DS_Store
+.ipynb_checkpoints/
+.idea/
+*.class
+*.iml
+analysis.log
+tomcat/logs/
+target/
+.settings/
+.project
+.classpath
+.factorypath
+out/
