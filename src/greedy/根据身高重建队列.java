@@ -1,5 +1,8 @@
 package greedy;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+
 public class 根据身高重建队列 {
 
     /**
@@ -24,5 +27,24 @@ public class 根据身高重建队列 {
      */
     public static void main(String[] args) {
 
+    }
+
+    /**
+     * 优先按照身高排列，身高大的排前面，然后再按照k来插入指定队列，后面身高小的插到前面也无所谓，要求是大于等于
+     */
+    public int[][] reconstructQueue(int[][] people) {
+        // 身高从大到小排（身高相同k小的站前面）
+        Arrays.sort(people, (a, b) -> {
+            if (a[0] == b[0]) return a[1] - b[1];
+            return b[0] - a[0];
+        });
+
+        LinkedList<int[]> que = new LinkedList<>();
+
+        for (int[] p : people) {
+            que.add(p[1],p);
+        }
+
+        return que.toArray(new int[people.length][]);
     }
 }

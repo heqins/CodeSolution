@@ -9,4 +9,8 @@ public class TreeNode {
     TreeNode parent;
 
     Integer value;
+
+    public TreeNode(int val) {
+        value = val;
+    }
 }
