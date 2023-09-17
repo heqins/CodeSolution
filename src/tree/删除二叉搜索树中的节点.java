@@ -19,12 +19,19 @@ public class 删除二叉搜索树中的节点 {
 
 
     public TreeNode deleteNode(TreeNode root, int key) {
-        if (root == null) return null;
+        if (root == null) {
+            return null;
+        }
 
         if (root.value == key) {
             // 若左/右子树为空，我们直接返回右/左子树节点即可（含义为直接将右/左子树节点搬到当前节点的位置）
-            if (root.left == null) return root.right;
-            if (root.right == null) return root.left;
+            if (root.left == null) {
+                return root.right;
+            }
+
+            if (root.right == null) {
+                return root.left;
+            }
 
             // 我们以「从当前节点的左子树中选择值最大的节点」为例子，我们通过树的遍历，
             // 找到其位于「最右边」的节点，记为 ttt（ttt 作为最右节点，必然有 t.right = null），
