@@ -15,7 +15,9 @@ public class 缺失的第一个正数 {
     public static int firstMissingPositive(int[] nums) {
         int len = nums.length;
         for (int i = 0; i < len; i++) {
-            System.out.println("i: " + i + " nums[i] - 1: " + (nums[i] - 1) + " num[i]: " + nums[i] + " nums[nums[i] - 1]: " + (nums[nums[i]] - 1));
+            // 数字一定在[1,n+1]中
+            // 把1放在下标为0的位置，把2放在下标为1的位置
+            // 换回来的i还要确定位置
             while (nums[i] > 0 && nums[i] <= len && nums[i] != nums[nums[i] - 1]) {
                 swap(nums, nums[i] - 1, i);
             }
