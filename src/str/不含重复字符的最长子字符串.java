@@ -7,39 +7,44 @@ public class 不含重复字符的最长子字符串 {
      * 例如，输入字符串"babcca"，其最长的不含重复字符的子字符串是"abc"，长度为3。
      * @param args
      */
-    public static void main(String[] args) {
-        String str = "babcca";
-        int i = find(str);
+    public int lengthOfLongestSubstring(String s) {
+        int result = helper(s);
 
-        System.out.println(i);
+        return result;
     }
 
-    public static int find(String word) {
-        if (word.length() == 0) {
+    public int helper(String s) {
+        if (s == null || s.isEmpty()) {
             return 0;
         }
 
-        int[] value = new int[256];
-        int max = 0;
-        int j = -1;
+        int[] exist = new int[256];
+        int length = s.length();
 
-        for (int i = 0; i < word.length(); i++) {
-            value[word.charAt(i)]++;
+        // 双指针维护一个滑动窗口
+        // left的右一个位置到right是有效区间
+        int left = -1;
+        int result = 0;
 
-            while (hasGreaterThan1(value)) {
-                ++j;
-                value[word.charAt(j)]--;
+        for (int right = 0; right < length; right++) {
+            char ch = s.charAt(right);
+            exist[ch]++;
+
+            // 不能是if,因为可能重复的不在最左边，需要向右循环
+            while (hasGreaterValue(exist)) {
+                left++;
+                exist[s.charAt(left)]--;
             }
 
-            max = Math.max(max, i - j);
+            result = Math.max(result, right - left);
         }
 
-        return max;
+        return result;
     }
 
-    public static boolean hasGreaterThan1(int[] nums) {
-        for (int num: nums) {
-            if (num > 1) {
+    public boolean hasGreaterValue(int[] exist) {
+        for (int i = 0; i < exist.length; i++) {
+            if (exist[i] > 1) {
                 return true;
             }
         }

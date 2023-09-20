@@ -9,7 +9,9 @@ public class 最大的异或 {
      * @param args
      */
     public static void main(String[] args) {
+        int[] nums = new int[]{1, 3, 4, 7};
 
+        System.out.println(find(nums));
     }
 
     public static int find(int[] nums) {
@@ -18,8 +20,8 @@ public class 最大的异或 {
         for (int num: nums) {
             TrieNode node = root;
             int xor = 0;
+
             for (int i = 31; i >= 0; i--) {
-                //
                 int bit = (num >> i) & 1;
                 if (node.children[1 - bit] != null) {
                     xor = (xor << 1) + 1;
@@ -36,10 +38,16 @@ public class 最大的异或 {
         return result;
     }
 
+    /**
+     * 对于数字构建二进制的前缀树
+     * @param nums
+     * @return
+     */
     public static TrieNode buildTrie(int[] nums) {
         TrieNode root = new TrieNode(2);
         for (int num: nums) {
             TrieNode node = root;
+
             for (int i = 31; i >= 0; i--) {
                 int bit = (num >> i) & 1;
                 if (node.children[bit] == null) {

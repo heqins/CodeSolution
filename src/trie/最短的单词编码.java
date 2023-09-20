@@ -18,7 +18,7 @@ public class 最短的单词编码 {
      * @param args
      */
     public static void main(String[] args) {
-
+        minimumLength(new String[]{"time", "me", "bell"});
     }
 
     public static int minimumLength(String[] words) {
@@ -26,6 +26,7 @@ public class 最短的单词编码 {
 
         int[] total = {0};
 
+        // 从1开始的话，就包含#的长度了
         dfs(root, total, 1);
 
         return total[0];

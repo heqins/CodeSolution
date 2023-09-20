@@ -40,5 +40,6 @@ public class 验证二叉搜索树 {
         nums.add(node.value);
 
         helper(node.right, nums);
+
     }
 }

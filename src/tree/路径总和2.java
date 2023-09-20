@@ -15,6 +15,7 @@ public class 路径总和2 {
      * 空间复杂度 O(N) ： 最差情况下，即树退化为链表时，path 存储所有树节点，使用 O(N)额外空间。
      */
     LinkedList<List<Integer>> res = new LinkedList<>();
+
     LinkedList<Integer> path = new LinkedList<>();
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {

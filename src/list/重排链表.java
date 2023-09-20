@@ -36,7 +36,6 @@ public class 重排链表 {
 
     private static void link(ListNode node1, ListNode node2, ListNode head) {
 
-
     }
 
     public static ListNode reverse(ListNode head) {
