@@ -20,8 +20,10 @@ public class 最长递增子序列 {
         }
 
         int[] dp = new int[len];
+
         // 初始化最长序列长度为1
         Arrays.fill(dp, 1);
+
         int result = Integer.MIN_VALUE;
 
         for (int i = 1; i < len; i++) {

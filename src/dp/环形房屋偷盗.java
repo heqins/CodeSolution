@@ -1,5 +1,7 @@
 package dp;
 
+import java.util.Arrays;
+
 public class 环形房屋偷盗 {
 
     /**
@@ -12,35 +14,27 @@ public class 环形房屋偷盗 {
      * 图14.4所示。被盗的房屋上方用特殊符号标出。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
-    public static int solve(int[] nums) {
+    public int solve(int[] nums) {
         int len = nums.length;
-        if (len == 0) {return 0;}
+        if (len == 0) return 0;
+        if (len == 1) return nums[0];
 
-        if (len == 1) {
-            return nums[0];
-        }
-
-        int result1 = find(nums, 0, len - 2);
-        int result2 = find(nums, 1, len - 1);
-
-        return Math.max(result1, result2);
+        return Math.max(helper(Arrays.copyOfRange(nums, 0, nums.length - 1)), helper(Arrays.copyOfRange(nums, 1, nums.length)));
     }
 
-    public static int find(int[] nums, int start, int end) {
-        int[] dp = new int[end - start];
-        dp[0] = nums[start];
-        if (start < end) {
-            dp[1] = Math.max(dp[start], dp[start + 1]);
+    public int helper(int[] nums) {
+        if(nums.length == 0) return 0;
+        if(nums.length == 1) return nums[0];
+
+        int[] dp = new int[nums.length];
+
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[0], nums[1]);
+
+        for (int i = 2; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
         }
 
-        for (int i = start; i < end; i++) {
-            dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
-        }
-
-        return dp[end - 1];
+        return dp[nums.length - 1];
     }
 }

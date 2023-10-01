@@ -20,11 +20,13 @@ public class 和为k的子数组 {
         int sum = 0;
         int count = 0;
 
+        // 前缀和
         Map<Integer, Integer> sumMap = new HashMap<>();
         sumMap.put(0, 1);
 
         for (int num: nums) {
             sum += num;
+            // 到目前为止，和为sum - k的序列个数
             count += sumMap.getOrDefault(sum - k, 0);
             sumMap.put(sum, sumMap.getOrDefault(sum, 0) + 1);
         }
@@ -42,6 +44,27 @@ public class 和为k的子数组 {
         for (int i = 1; i < nums.length; i++) {
             sum += nums[i - 1];
             count += sumArray[sum - k];
+        }
+
+        return count;
+    }
+
+    // 当我们计算前缀和时，如果存在两个前缀和 preSum1 和 preSum2，它们满足 preSum1 - preSum2 = k，
+    // 那么说明从 preSum2 到 preSum1 的这一段子数组的和就是 k
+    public int subarraySum3(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+
+        int count = 0;
+        int preSum = 0;
+
+        for (int num: nums) {
+            preSum += num;
+            if (map.containsKey(preSum - k)) {
+                count += map.get(preSum - k);
+            }
+
+            map.put(preSum, map.getOrDefault(preSum, 0) + 1);
         }
 
         return count;

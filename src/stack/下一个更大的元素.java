@@ -38,4 +38,8 @@ public class 下一个更大的元素 {
 
         return res;
     }
+
+    public static void main(String[] args) {
+        System.out.println('x' - 'a');
+    }
 }

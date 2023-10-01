@@ -23,6 +23,7 @@ public class 最大的异或 {
 
             for (int i = 31; i >= 0; i--) {
                 int bit = (num >> i) & 1;
+                // 如果前缀树里有数字二进制当前位相反的数字，那么异或结果当前位+1，前缀树节点向下移动
                 if (node.children[1 - bit] != null) {
                     xor = (xor << 1) + 1;
                     node = node.children[1 - bit];

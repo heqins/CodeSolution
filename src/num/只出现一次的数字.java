@@ -5,20 +5,15 @@ import java.util.Arrays;
 public class 只出现一次的数字 {
 
     /**
-     * 题目：输入一个整数数组，数组中只有一个数字出现了一次，
-     * 而其他数字都出现了3次。请找出那个只出现一次的数字。
-     * 例如，如果输入的数组为[0，1，0，1，0，1，100]，则只出现一次的数字是100。
-     * @param args
+     给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+     你必须设计并实现线性时间复杂度的算法来解决此问题，且该算法只使用常量额外空间。
      */
-    public static void main(String[] args) {
-        int[] nums = new int[]{0, 1, 0, 1, 0, 1, 100};
-        int[] bitNums = new int[32];
+    public int singleNumber(int[] nums) {
+        int result = 0;
         for (int num: nums) {
-            for (int i = 0; i < 32; i++) {
-                bitNums[i] += (num >> (31 - i)) & 1;
-            }
+            result = result ^ num;
         }
 
-        System.out.println(Arrays.toString(bitNums));
+        return result;
     }
 }
