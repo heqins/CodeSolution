@@ -1,5 +1,6 @@
 package array;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,21 +15,40 @@ public class 连续的子数组和 {
      *
      * 如果存在一个整数 n ，令整数 x 符合 x = n * k ，则称 x 是 k 的一个倍数。0 始终视为 k 的一个倍数。
      */
-    public boolean checkSubarraySum(int[] nums, int k) {
-        int N = nums.length, cache = 0;
-        int[] sum = new int[N+1];
-        HashSet<Integer> set = new HashSet<>();
 
-        for (int i = 0; i < N; i++) {
-            sum[i+1] = sum[i] + nums[i];
-            int res = k == 0 ? sum[i+1] : sum[i+1] % k;
-            if (set.contains(res)) {
-                return true;
+    public static void main(String[] args) {
+            checkSubarraySum(new int[]{23, 2, 4, 6, 7}, 6);
+    }
+
+    public static boolean checkSubarraySum(int[] nums, int k) {
+        int n = nums.length;
+        if (n < 2) {
+            return false; // 子数组至少为2
+        }
+
+        HashMap<Integer, Integer> modMap = new HashMap<>();
+        modMap.put(0, -1); // 初始化模数0对应的索引为-1，用于处理前两个元素的累积和
+
+        int prefixSum = 0;
+        for (int i = 0; i < n; i++) {
+            prefixSum += nums[i];
+
+            if (k != 0) {
+                // (y - x) % k == 0 -> y % k == 0; x % k == 0
+                prefixSum %= k;
             }
-            set.add(cache);
-            cache = res;
+
+            if (modMap.containsKey(prefixSum)) {
+                int prevIndex = modMap.get(prefixSum);
+                if (i - prevIndex >= 2) {
+                    return true;
+                }
+            } else {
+                modMap.put(prefixSum, i);
+            }
         }
 
         return false;
     }
+
 }

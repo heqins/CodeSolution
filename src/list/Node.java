@@ -9,6 +9,8 @@ public class Node {
 
     Node child;
 
+    Node random;
+
     Node() {}
 
     Node(int val) { this.val = val; }

@@ -11,5 +11,34 @@ public class 搜索旋转排序数组 {
      *
      * 你必须设计一个时间复杂度为 O(log n) 的算法解决此问题。
      */
+    public int search(int[] nums, int target) {
+        // 见2
+        int left = 0;
+        int right = nums.length - 1;
 
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            if (nums[left] <= nums[mid]) {
+                if (nums[left] <= target && target < nums[mid]) {
+                    right = mid - 1;
+                }else {
+                    left = mid + 1;
+                }
+            }
+
+            if (nums[mid] <= nums[right]) {
+                if (nums[mid] < target && target <= nums[right]) {
+                    left = mid + 1;
+                }else {
+                    right = mid - 1;
+                }
+            }
+        }
+
+        return -1;
+    }
 }

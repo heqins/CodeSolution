@@ -17,4 +17,43 @@ public class 随机链表的复制 {
      * random_index：随机指针指向的节点索引（范围从 0 到 n-1）；如果不指向任何节点，则为  null 。
      * 你的代码 只 接受原链表的头节点 head 作为传入参数。
      */
+
+    public Node copyRandomList(Node head) {
+        if (head == null) {
+            return null;
+        }
+
+        // 第一次遍历：在原链表中每个节点后面插入复制节点
+        Node current = head;
+        while (current != null) {
+            Node newNode = new Node(current.val);
+            newNode.next = current.next;
+            current.next = newNode;
+            current = newNode.next;
+        }
+
+        // 第二次遍历：设置复制节点的随机指针
+        current = head;
+        while (current != null) {
+            if (current.random != null) {
+                current.next.random = current.random.next;
+            }
+            current = current.next.next;
+        }
+
+        // 第三次遍历：拆分链表，将原链表和复制链表分开
+        current = head;
+        Node newHead = head.next;
+        Node newCurrent = newHead;
+        while (current != null) {
+            current.next = newCurrent.next;
+            current = current.next;
+            if (current != null) {
+                newCurrent.next = current.next;
+                newCurrent = newCurrent.next;
+            }
+        }
+
+        return newHead;
+    }
 }
