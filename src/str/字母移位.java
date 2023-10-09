@@ -17,7 +17,7 @@ public class 字母移位 {
 
         for (int i = s.length() - 2; i >= 0; i--) {
             // 注意取模
-            shifts[i] = shifts[i] + shifts[i + 1] % 26;
+            shifts[i] = (shifts[i] + shifts[i + 1] % 26);
         }
 
         StringBuilder sb = new StringBuilder();

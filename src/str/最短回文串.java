@@ -10,6 +10,7 @@ public class 最短回文串 {
         shortestPalindrome("aaaabc");
     }
 
+    // 最短的回文串需要本身找到最长的有效回文串，找到以后再添加一个串来构成新的回文串
     public static String shortestPalindrome(String s) {
         int n = s.length();
 

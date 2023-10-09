@@ -33,7 +33,8 @@ public class 最大子序列和 {
             sum += nums[i];
 
             result = Math.max(result, sum);
-
+            // 如果 sum 变成负数，说明当前子序列的和已经对后续的子序列和产生了负面影响，
+            // 即使后续的元素是正数，也不会改善当前的子序列和
             if (sum < 0) {
                 sum = 0;
             }

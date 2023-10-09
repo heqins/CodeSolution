@@ -11,7 +11,6 @@ public class 二叉树的最近公共祖先 {
     }
 
     // 如果从下往上去处理？后序遍历
-
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return null;

@@ -41,4 +41,52 @@ public class 在排序数组中查找元素的第一个和最后一个位置 {
 
         return new int[]{start, end};
     }
+
+    public int[] searchRange2(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+
+        int start = -1;
+        int end = -1;
+
+        // 二分查找找到目标值
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                start = mid;
+                end = mid;
+                break;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        // 如果找到了目标值，继续查找起始位置和结束位置
+        if (start != -1) {
+            // 二分查找起始位置
+            while (left <= start) {
+                int mid = left + (start - left) / 2;
+                if (nums[mid] == target) {
+                    start = mid;
+                } else {
+                    left = mid + 1;
+                }
+            }
+
+            // 二分查找结束位置
+            while (end <= right) {
+                int mid = end + (right - end) / 2;
+                if (nums[mid] == target) {
+                    end = mid;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+
+        return new int[]{start, end};
+    }
+
 }

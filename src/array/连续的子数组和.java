@@ -1,8 +1,6 @@
 package array;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 public class 连续的子数组和 {
 
@@ -17,7 +15,7 @@ public class 连续的子数组和 {
      */
 
     public static void main(String[] args) {
-            checkSubarraySum(new int[]{23, 2, 4, 6, 7}, 6);
+        checkSubarraySum(new int[]{23, 2, 4, 6, 7}, 6);
     }
 
     public static boolean checkSubarraySum(int[] nums, int k) {

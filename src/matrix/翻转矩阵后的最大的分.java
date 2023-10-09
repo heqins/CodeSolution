@@ -25,7 +25,7 @@ public class 翻转矩阵后的最大的分 {
             }
         }
 
-        // Step 2: 最大化每一列的1的数量
+        // Step 2: 最大化除第一列之外的每一列的1的数量
         for (int j = 1; j < n; j++) {
             int countOnes = 0;
             for (int i = 0; i < m; i++) {

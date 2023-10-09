@@ -1,6 +1,5 @@
 package str;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class 字符串解码 {

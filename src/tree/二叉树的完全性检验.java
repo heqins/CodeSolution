@@ -13,7 +13,7 @@ public class 二叉树的完全性检验 {
      */
 
     // 思路：把一颗树的节点（包括空节点）按层序遍历排成一行，
-    // 当且仅当存在两个相邻节点：前一个为null，后一个不为null时，才不是不是完全二叉树。
+    // 当且仅当存在两个相邻节点：前一个为null，后一个不为null时，才不是完全二叉树。
     public boolean isCompleteTree(TreeNode root) {
         if (root == null) {
             return false;

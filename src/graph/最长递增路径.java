@@ -9,10 +9,6 @@ public class 最长递增路径 {
      * 如阴影部分所示。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static int solve(int[][] matrix) {
         int row = matrix.length;
         int col = matrix[0].length;

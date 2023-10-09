@@ -12,9 +12,6 @@ public class 跳跃游戏2 {
      * 返回到达 nums[n - 1] 的最小跳跃次数。生成的测试用例可以到达 nums[n - 1]。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 贪心算法

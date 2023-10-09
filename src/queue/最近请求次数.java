@@ -6,6 +6,7 @@ import java.util.Queue;
 public class 最近请求次数 {
 
     public static class RecentCounter {
+
         private Queue<Integer> items;
 
         private int windowSize;

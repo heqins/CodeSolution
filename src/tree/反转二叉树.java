@@ -4,13 +4,6 @@ import java.util.Stack;
 
 public class 反转二叉树 {
 
-    /**
-     *
-     * @param args
-     */
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 遍历顺序：前中后  前序遍历 -> 中左右;中序遍历 -> 左中右;后序遍历 -> 左右中

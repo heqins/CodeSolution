@@ -41,7 +41,7 @@ public class 编辑距离 {
             for (int j = 1; j <= n; j++) {
                 if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
                     // skip跳过，继承之前的次数
-                    //  注意：由于要考虑空字符串，针对 word1 和 word2 的讨论需要将下标减 1，这一点可以通过如下描述或者参考代码进行理解。
+                    // 注意：由于要考虑空字符串，针对 word1 和 word2 的讨论需要将下标减 1，这一点可以通过如下描述或者参考代码进行理解。
                     dp[i][j] = dp[i - 1][j - 1];
                     continue;
                 }

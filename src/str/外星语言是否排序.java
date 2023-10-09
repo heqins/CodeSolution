@@ -13,9 +13,6 @@ public class 外星语言是否排序 {
      * 面。因此，这一组单词是按照字母表顺序排序的，应该输出true。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
 
     /**
      *

@@ -28,8 +28,9 @@ public class 最大正方形 {
         for (int i = 1; i < matrix.length; i++) {
             for (int j = 1; j < matrix[0].length; j++) {
                 if (matrix[i][j] == '1') {
+                    // 考虑当前是正方形的右下角，取决于左边，上面，左上的最小边长
                     dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j])) + 1;
-
+                    // 用于记录见过的最大边长
                     slide = Math.max(slide, dp[i][j]);
                 }
             }

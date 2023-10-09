@@ -13,10 +13,6 @@ public class 替换单词 {
      * the battery"，则替换之后的句子是"the cat was rat by the
      * bat"。
      */
-    public static void main(String[] args) {
-
-    }
-
     public static String replacePrefix(TrieNode node, String sentence) {
         TrieNode root = node;
         StringBuilder sb = new StringBuilder();

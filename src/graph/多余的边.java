@@ -31,6 +31,7 @@ public class 多余的边 {
         }
 
         for (int[] edge: edges) {
+            // 如果没有公共根节点
             if (!union(fathers, edge[0], edge[1])) {
                 return edge;
             }
@@ -39,6 +40,7 @@ public class 多余的边 {
         return new int[2];
     }
 
+    // 合并方法返回的是什么？true：有公共父节点 false：没有公共父节点
     public static boolean union(int[] fathers, int x, int y) {
         int fatherOfI = findFathers(fathers, x);
         int fatherOfJ = findFathers(fathers, y);

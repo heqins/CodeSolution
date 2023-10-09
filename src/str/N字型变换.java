@@ -19,7 +19,12 @@ public class N字型变换 {
      *
      * string convert(string s, int numRows);
      */
-    public String convert(String s, int numRows) {
+
+    public static void main(String[] args) {
+        convert("PAYPALISHIRING", 3);
+    }
+
+    public static String convert(String s, int numRows) {
         if (numRows < 2) {
             return s;
         }

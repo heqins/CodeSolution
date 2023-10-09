@@ -8,9 +8,6 @@ public class 二叉搜索树最近公共节点 {
      * 例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
 
     // 利用二叉搜索树的特性，最近公共祖先必然大于p或q中的一个，小于p或q的一个
 
@@ -31,6 +28,25 @@ public class 二叉搜索树最近公共节点 {
             }else {
                 break;
             }
+        }
+
+        return root;
+    }
+
+    // 二叉树的最近公共祖先
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) return root;
+
+        TreeNode left = lowestCommonAncestor2(root.left, p, q);
+        TreeNode right = lowestCommonAncestor2(root.right, p, q);
+
+        if (left == null) {
+            return right;
+        }
+
+        if (right == null)
+        {
+            return left;
         }
 
         return root;

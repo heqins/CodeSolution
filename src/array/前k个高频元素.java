@@ -6,12 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 public class 前k个高频元素 {
+
     /**
      * 给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。
      */
     public static void main(String[] args) {
-        int[] nums = new int[]{1};
-        topKFrequent(nums, 1);
+        int[] nums = new int[]{1,2,2,1,1,4};
+        topKFrequent(nums, 2);
     }
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap();
@@ -22,9 +23,11 @@ public class 前k个高频元素 {
 
         int[] result = new int[k];
 
+        // buckets的索引被映射为数组统计的频率了，那么越往后的索引对应的数频率越高
         List<Integer>[] buckets = new ArrayList[nums.length + 1];
 
         for (int num: map.keySet()) {
+            // i就是频率
             int i = map.get(num);
 
             if (buckets[i] == null) {

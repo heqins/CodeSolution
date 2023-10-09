@@ -1,4 +1,4 @@
-package array;
+package matrix;
 
 public class 岛屿数量 {
 

@@ -8,9 +8,10 @@ import java.util.PriorityQueue;
 public class 滑动窗口最大值 {
 
     /**
-     * 给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
+     * 给你一个整数数组nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
      * 返回 滑动窗口中的最大值 。
      */
+
     // 最大堆的思想：时间复杂度O(nlogk) 空间复杂度O(n)
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;

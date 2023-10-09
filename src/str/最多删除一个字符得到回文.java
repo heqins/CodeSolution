@@ -9,7 +9,32 @@ public class 最多删除一个字符得到回文 {
      * true。
      * @param args
      */
-    public static void main(String[] args) {
+    public boolean validPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
 
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                // 尝试删除左边或右边的字符，然后检查剩余的字符串是否是回文
+                return isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);
+            }
+            left++;
+            right--;
+        }
+
+        return true; // 整个字符串都是回文
     }
+
+    // 辅助函数：检查字符串s的子串从start到end是否是回文字符串
+    private boolean isPalindrome(String s, int start, int end) {
+        while (start < end) {
+            if (s.charAt(start) != s.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+
 }

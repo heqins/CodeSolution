@@ -10,10 +10,6 @@ public class 出现频率最高的k个数字 {
      * 现了2次，数字3出现了1次，因此出现频率最高的2个数字是1和2。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static List<Integer> find(int k, int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int num: nums) {

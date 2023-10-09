@@ -7,7 +7,4 @@ public class 二叉树中每层的最大值 {
      * 如，输入图7.4中的二叉树，返回各层节点的最大值[3，4，9]。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
 }

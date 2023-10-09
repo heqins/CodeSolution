@@ -4,8 +4,6 @@ public class 单词之和 {
 
     TrieNode root;
 
-
-
     /**
      * 题目：请设计实现一个类型MapSum，它有如下两个操作。
      * ● 函数insert，输入一个字符串和一个整数，在数据集合中添加一个
@@ -13,11 +11,7 @@ public class 单词之和 {
      * 字符串对应的值替换成新值。
      * ● 函数sum，输入一个字符串，返回数据集合中所有以该字符串为
      * 前缀的字符串对应的值之和。
-     * @param args
      */
-    public static void main(String[] args) {
-
-    }
 
     public void insert(String word, int val) {
         TrieNode node = root;

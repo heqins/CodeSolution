@@ -30,6 +30,7 @@ public class 统计封闭岛屿的数目 {
             return false;
         }
 
+        // 不能仅仅是 == 1
         if (grid[i][j] != 0) {
             return true;
         }

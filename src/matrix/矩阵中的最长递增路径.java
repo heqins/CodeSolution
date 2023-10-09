@@ -10,6 +10,7 @@ public class 矩阵中的最长递增路径 {
     private int result = 0;
 
     private int[][] direction = new int[][]{{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+
     public int longestIncreasingPath(int[][] matrix) {
         int m = matrix.length;
 
@@ -31,6 +32,7 @@ public class 矩阵中的最长递增路径 {
         return result;
     }
 
+    // 记忆化搜索和回溯还不太一样。记忆化搜索不会回退状态，而是在递归调用中使用已经计算的结果，以避免重复计算。
     public int helper(int[][] matrix, int i, int j, int[][] used) {
         if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[0].length) {
             return 0;

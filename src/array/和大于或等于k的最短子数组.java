@@ -20,6 +20,7 @@ public class 和大于或等于k的最短子数组 {
         int sum = 0;
         for (int right = 0; right < nums.length; right++) {
             sum += nums[right];
+            // 而内部的 while 循环在最坏情况下也只会遍历数组一次。因此，整个算法的时间复杂度是线性的。
             while (left <= right && sum >= k) {
                 result = Math.min(result, right - left + 1);
                 sum -= nums[left++];

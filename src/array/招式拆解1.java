@@ -3,7 +3,7 @@ package array;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 招式拆解1 {
+public class  招式拆解1 {
 
     /**
      * 某套连招动作记作序列 arr，其中 arr[i] 为第 i 个招式的名字。请返回 arr 中最多可以出连续不重复的多少个招式。

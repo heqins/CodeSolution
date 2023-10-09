@@ -1,7 +1,5 @@
 package array;
 
-import java.util.Arrays;
-
 public class 分隔等和子集 {
 
     /**
