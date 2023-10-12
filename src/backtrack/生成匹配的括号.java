@@ -1,5 +1,8 @@
 package backtrack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class 生成匹配的括号 {
 
     /**
@@ -8,7 +11,27 @@ public class 生成匹配的括号 {
      * 时，有两个符合条件的括号组合，分别是"（()）"和"()()"。
      * @param args
      */
-    public static void main(String[] args) {
+    public List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList();
 
+        helper(n, n, result, "");
+
+        return result;
+    }
+
+    public void helper(int left, int right, List<String> result, String str) {
+        if (left < 0 || right < 0 || left > right) {
+            return;
+        }
+
+        if (left == 0 && right == 0) {
+            result.add(str);
+
+            return;
+        }
+
+        helper(left - 1, right, result, str + "(");
+
+        helper(left, right - 1, result, str + ")");
     }
 }

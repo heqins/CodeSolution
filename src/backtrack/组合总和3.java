@@ -14,6 +14,7 @@ public class 组合总和3 {
      */
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> res = new ArrayList();
+
         List<Integer> path = new ArrayList();
 
         helper(res, path, 1, k, n);

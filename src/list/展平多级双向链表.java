@@ -9,9 +9,6 @@ public class 展平多级双向链表 {
      * 向链表展平成普通的双向链表，即所有节点都没有子链表。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
 
     public static Node flatten(Node head) {
         flattenGetTail(head);

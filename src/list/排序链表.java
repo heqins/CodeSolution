@@ -69,4 +69,65 @@ public class 排序链表 {
 
         return dummy.next;
     }
+
+    public ListNode sortList2(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+
+        if (head.next == null) {
+            return head;
+        }
+
+        ListNode slow = head;
+        ListNode fast = head.next;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        ListNode rightHead = sortList2(slow.next);
+        slow.next = null;
+
+        ListNode leftHead = sortList2(head);
+
+        ListNode newHead = merge2(leftHead, rightHead);
+
+        return newHead;
+    }
+
+    public ListNode merge2(ListNode left, ListNode right) {
+        ListNode l = left;
+        ListNode r = right;
+
+        ListNode dummy = new ListNode(-1);
+        ListNode head = dummy;
+
+        while (l != null && r != null) {
+            if (l.val >= r.val) {
+                head.next = r;
+                r = r.next;
+            }else {
+                head.next = l;
+                l = l.next;
+            }
+
+            head = head.next;
+        }
+
+        while (l != null) {
+            head.next = l;
+            head = head.next;
+            l = l.next;
+        }
+
+        while (r != null) {
+            head.next = r;
+            head = head.next;
+            r = r.next;
+        }
+
+        return dummy.next;
+    }
 }

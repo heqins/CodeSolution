@@ -12,12 +12,7 @@ public class 分割回文子字符串 {
      * 入"google"，将输出3种符合条件的分割方法，分别是
      * ["g"，"o"，"o"，"g"，"l"，"e"]、["g"，"oo"，"g"，"l"，"e"]
      * 和["goog"，"l"，"e"]。
-     * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static List<List<String>> partition(String word) {
         List<List<String>> result = new ArrayList<>();
 
@@ -33,6 +28,7 @@ public class 分割回文子字符串 {
         }
 
         for (int i = index; i < word.length(); i++) {
+            // 回溯加双指针，右边界遍历
             if (isPalindrome(word, index, i)) {
                 subset.add(word.substring(index, i + 1));
                 helper(result, subset, word, i + 1);

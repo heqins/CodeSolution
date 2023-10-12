@@ -9,10 +9,6 @@ public class 排序的循环链表 {
      * 值为4的节点之后的链表如图4.15（b）所示。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public Node solve(Node head, int insertVal) {
         Node node = new Node(insertVal);
 

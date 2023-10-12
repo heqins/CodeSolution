@@ -12,7 +12,6 @@ public class 粉刷房子 {
      * @param args
      */
     public static void main(String[] args) {
-
     }
 
     public static int solve(int[][] costs) {

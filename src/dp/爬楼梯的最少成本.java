@@ -14,24 +14,24 @@ public class 爬楼梯的最少成本 {
      * @param args
      */
     public static void main(String[] args) {
-
         // 自下而上解决问题
-
+        System.out.println(minCostClimbingStairs(new int[]{1, 100, 1, 1, 100, 1}));
     }
 
-//    public static int minCostClimbingStairs(int[] cost) {
-//        int len = cost.length;
-//        int[] dp = new int[len];
-//
-//        dp[0] = cost[0];
-//        dp[1] = cost[1];
-//
-//        for (int i = 2; i < len; i++) {
-//            dp[i] = Math.min(dp[i - 2], dp[i - 1]) + cost[i];
-//        }
-//
-//        return Math.min(dp[len - 2], dp[len - 1]);
-//    }
+    public static int minCostClimbingStairs(int[] cost) {
+        int len = cost.length;
+        int[] dp = new int[len];
+
+        dp[0] = cost[0];
+        dp[1] = cost[1];
+
+        for (int i = 2; i < len; i++) {
+            dp[i] = Math.min(dp[i - 2], dp[i - 1]) + cost[i];
+        }
+
+        // 可以从倒数第二或倒数第一来跳跃
+        return Math.min(dp[len - 2], dp[len - 1]);
+    }
 
     // 空间复杂度:O(1)
     public static int solve(int[] cost) {

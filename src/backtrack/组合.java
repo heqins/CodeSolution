@@ -5,11 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class 组合 {
+
     /**
      * 给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
      */
-
     private static List<List<Integer>> res = new LinkedList();
+
     private static List<Integer> path = new LinkedList();
 
     public static void main(String[] args) {
@@ -29,7 +30,6 @@ public class 组合 {
             res.add(new ArrayList(path));
             return;
         }
-
 
         for (int i = current; i <= n; i++) {
             path.add(i);

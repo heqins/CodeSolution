@@ -11,10 +11,6 @@ public class 链表中的数字相加 {
      * 4.10（c）所示。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static ListNode add(ListNode l1, ListNode l2) {
         ListNode r1 = reverse(l1);
         ListNode r2 = reverse(l2);

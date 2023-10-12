@@ -12,8 +12,10 @@ public class 全排列2 {
     // https://pic.leetcode.cn/1674877014-GhcSpO-image.png
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> res = new ArrayList();
+
         List<Integer> temp = new ArrayList();
 
+        // 因为可能有重复的值，所以used不能初始化为new int[21]，否则前一个访问后后一个就不能访问了
         int[] used = new int[nums.length];
 
         Arrays.sort(nums);

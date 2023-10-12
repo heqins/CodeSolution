@@ -9,11 +9,5 @@ public class 最长斐波那契数列 {
      * 波那契数列是1、2、3、5、8，因此输出是5。
      * @param args
      */
-    public static void main(String[] args) {
 
-    }
-
-    public static int solve(int[] nums) {
-        return 0;
-    }
 }

@@ -36,6 +36,7 @@ public class 随机链表的复制 {
         current = head;
         while (current != null) {
             if (current.random != null) {
+                // current.random是当前的random指向的，那它的下一个就是复制的那个random指向的节点
                 current.next.random = current.random.next;
             }
             current = current.next.next;

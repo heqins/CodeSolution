@@ -8,10 +8,6 @@ public class 反转链表 {
      * 得到的链表如图4.8（b）所示
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static ListNode reverseListNode(ListNode head) {
         if (head == null || head.next == null) {
             return head;

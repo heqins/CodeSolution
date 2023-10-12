@@ -11,10 +11,6 @@ public class 包含k个元素的组合 {
      * [1，3]和[2，3]。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static List<List<Integer>> find(int n, int k) {
         List<List<Integer>> result = new LinkedList<>();
 
@@ -27,9 +23,12 @@ public class 包含k个元素的组合 {
         if (subset.size() == k) {
             result.add(new LinkedList<>(subset));
         }else if (index <= n) {
+            // 关键是这里，每次可以不选择当前index的元素
             helper(result, subset, n, k, index + 1);
 
+            // 如果加了，后面回溯要去掉当前元素
             subset.add(index);
+
             helper(result, subset, n, k, index + 1);
 
             subset.removeLast();

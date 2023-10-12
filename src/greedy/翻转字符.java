@@ -1,7 +1,8 @@
-package dp;
+package greedy;
 
 public class 翻转字符 {
 
+    // https://leetcode.cn/problems/flip-string-to-monotone-increasing/description/
     /**
      * 题目：输入一个只包含'0'和'1'的字符串，其中，'0'可以翻转
      * 成'1'，'1'可以翻转成'0'。请问至少需要翻转几个字符，才可以使
@@ -11,7 +12,21 @@ public class 翻转字符 {
      * 符'0'翻转成'1'，得到字符串"00111"。
      * @param args
      */
-    public static void main(String[] args) {
+    public int minFlipsMonoIncr(String s) {
+        int result = 0;
+        int ones = 0;
+        // 贪心算法，在遇到0的时候，如果之前有1，则翻转
+        for (char c: s.toCharArray()) {
+            if (c == '0') {
+                if (ones > 0) {
+                    result++;
+                    ones--;
+                }
+            }else {
+                ones++;
+            }
+        }
 
+        return result;
     }
 }

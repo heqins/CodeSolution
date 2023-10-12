@@ -27,7 +27,7 @@ public class 子集2 {
         res.add(new ArrayList(temp));
 
         for (int i = start; i < nums.length; i++) {
-            // 跳过重复的
+            // 跳过重复的，为什么是i > start? 横向遍历的时候不希望有重复的起始点
             if (i > start && nums[i] == nums[i - 1]) {
                 continue;
             }

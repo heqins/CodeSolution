@@ -7,10 +7,6 @@ public class 两个链表的第1个重合节点 {
      * 点。例如，图4.5中的两个链表的第1个重合节点的值是4。
      * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static ListNode findIntersectionNode(ListNode l1, ListNode l2) {
         int length1 = countListNode(l1);
         int length2 = countListNode(l2);

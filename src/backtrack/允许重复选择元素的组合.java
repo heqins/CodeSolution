@@ -12,29 +12,28 @@ public class 允许重复选择元素的组合 {
      * 意次。例如，输入整数集合[2，3，5]，元素之和等于8的组合有3
      * 个，分别是[2，2，2，2]、[2，3，3]和[3，5]。
      */
-    public static void main(String[] args) {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> result = new ArrayList();
+        List<Integer> temp = new LinkedList();
 
-    }
-
-    public static List<List<Integer>> combinationSum(int[] nums, int target) {
-        List<List<Integer>> result = new ArrayList<>();
-
-        helper(result, new LinkedList<>(), nums, target, 0);
+        helper(candidates, target, result, temp, 0);
 
         return result;
     }
 
-    public static void helper(List<List<Integer>> result, LinkedList<Integer> subset, int[] nums, int target, int index) {
+    public void helper(int[] candidates, int target, List<List<Integer>> result, List<Integer> temp, int index) {
         if (target == 0) {
-            result.add(new ArrayList<>(subset));
-            // target > 0 用于剪枝
-        }else if (target > 0 && index < nums.length) {
-            helper(result, subset, nums, target, index + 1);
+            result.add(new ArrayList(temp));
+        }else if (target > 0 && index < candidates.length) {
+            // 不包括当前元素
+            helper(candidates, target, result, temp, index + 1);
 
-            subset.add(nums[index]);
-            helper(result, subset, nums, target - nums[index], index);
+            temp.add(candidates[index]);
 
-            subset.removeLast();
+            // 包括当前元素
+            helper(candidates, target - candidates[index], result, temp, index);
+
+            temp.remove(temp.size() - 1);
         }
     }
 }

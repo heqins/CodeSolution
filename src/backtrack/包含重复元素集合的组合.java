@@ -14,14 +14,14 @@ public class 包含重复元素集合的组合 {
      * 2个，分别是[2，2，4]和[2，3，3]。
      * @param args
      */
-    public static void main(String[] args) {
 
-    }
+    // ***
 
     public static List<List<Integer>> find(int[] nums, int target) {
         Arrays.sort(nums);
 
         List<List<Integer>> result = new ArrayList<>();
+
         helper(result, new LinkedList<>(), nums, 0, target);
 
         return result;
@@ -34,6 +34,7 @@ public class 包含重复元素集合的组合 {
             helper(result, subset, nums, findNext(nums, index), target);
 
             subset.add(nums[index]);
+
             helper(result, subset, nums, index + 1, target - nums[index]);
 
             subset.removeLast();

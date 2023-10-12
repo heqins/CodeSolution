@@ -12,32 +12,28 @@ public class 房屋偷盗 {
      * 和4的房屋内盗窃，那么他能偷取到价值为9的财物，这是他在不触
      * 发报警系统的情况下能偷取到的最多的财物，如图14.3所示。被盗
      * 的房屋上方用特殊符号标出。
-     * @param args
      */
-    public static void main(String[] args) {
-
-    }
-
     public static int rob(int[] nums) {
         if (nums.length == 0) {return 0;}
         int[] dp = new int[nums.length];
+
         Arrays.fill(dp, -1);
 
-        helper(nums, dp, nums.length - 1);
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+
+        dp[0] = nums[0];
+
+        if (n > 1) {
+            dp[1] = Math.max(dp[0], nums[1]);
+        }
+
+        for (int i = 2; i < n; i++) {
+            dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+        }
 
         return Math.max(dp[nums.length - 1], dp[nums.length - 2]);
     }
-
-    public static void helper(int[] nums, int[] dp, int index) {
-        if (index == 0) {
-            dp[index] = nums[0];
-        }else if (index == 1) {
-            dp[index] = Math.max(dp[0], dp[1]);
-        }else if (dp[index] < 0) {
-            helper(nums, dp, index - 1);
-            helper(nums, dp, index - 2);
-            dp[index] = Math.max(dp[index - 2] + nums[index], dp[index - 1]);
-        }
-    }
-
 }

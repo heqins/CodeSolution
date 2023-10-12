@@ -32,4 +32,36 @@ public class 两两交换链表中的节点 {
 
         return dummy.next;
     }
+
+    public ListNode swapPairs2(ListNode head) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode cur = dummy;
+
+        ListNode slow = head;
+        if (head == null) {
+            return head;
+        }
+
+        ListNode fast = slow.next;
+
+        while (fast != null) {
+            ListNode temp = fast.next;
+
+            cur.next = fast;
+            fast.next = slow;
+            slow.next = temp;
+
+            cur = slow;
+            slow = temp;
+
+            if (slow == null) {
+                break;
+            }
+
+            fast = slow.next;
+        }
+
+        return dummy.next;
+    }
 }

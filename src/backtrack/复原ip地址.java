@@ -15,6 +15,7 @@ public class 复原ip地址 {
     public List<String> restoreIpAddresses(String s) {
         List<String> result = new ArrayList();
 
+        // 0111 256111 1010101010
         helper(s, result, new ArrayList(), 0);
 
         return result;
@@ -30,6 +31,7 @@ public class 复原ip地址 {
             return;
         }
 
+        // 在每个位置有3种切割方式
         for (int i = 1; i <= 3; i++) {
             if (index + i > s.length()) {
                 continue;
