@@ -33,7 +33,7 @@ public class 二叉搜索树最近公共节点 {
         return root;
     }
 
-    // 二叉树的最近公共祖先
+    // 二叉搜索树的最近公共祖先
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) return root;
 
