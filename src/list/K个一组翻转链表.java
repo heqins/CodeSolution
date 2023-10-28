@@ -9,6 +9,14 @@ public class K个一组翻转链表 {
      *
      * 你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
      */
+    public static void main(String[] args) {
+        String a = "a";
+        String b = "b";
+        String c = "ab";
+        String d = a + b;
+        System.out.println(c == d);
+    }
+
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) {
             return head;
