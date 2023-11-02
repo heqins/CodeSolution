@@ -3,7 +3,7 @@ package array;
 public class 最长重复子数组 {
 
     /**
-     * 给两个整数数组 nums1 和 nums2 ，返回 两个数组中 公共的 、长度最长的子数组的长度 。
+     * 给两个整数数组 nums1 和 nums2 ，返回 两个数组中公共的 、长度最长的子数组的长度 。
      */
     public int findLength(int[] nums1, int[] nums2) {
         int result = 0;

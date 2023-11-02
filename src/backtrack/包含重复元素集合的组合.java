@@ -14,9 +14,6 @@ public class 包含重复元素集合的组合 {
      * 2个，分别是[2，2，4]和[2，3，3]。
      * @param args
      */
-
-    // ***
-
     public static List<List<Integer>> find(int[] nums, int target) {
         Arrays.sort(nums);
 

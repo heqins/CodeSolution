@@ -20,6 +20,7 @@ public class 随机数索引 {
 
     public int pick(int target) {
         Random r = new Random();
+
         // 蓄水池算法：每次以1/n的概率保留蓄水池中的数，对于每个数取到的概率是相同的
 
         int n = 0;

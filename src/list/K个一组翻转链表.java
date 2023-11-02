@@ -1,5 +1,8 @@
 package list;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class K个一组翻转链表 {
 
     /**
@@ -10,11 +13,10 @@ public class K个一组翻转链表 {
      * 你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
      */
     public static void main(String[] args) {
-        String a = "a";
-        String b = "b";
-        String c = "ab";
-        String d = a + b;
-        System.out.println(c == d);
+        BigDecimal a = new BigDecimal("1.0");
+        BigDecimal b = new BigDecimal("3.0");
+        BigDecimal c = a.divide(b, RoundingMode.DOWN);
+        System.out.println(c.toString());
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {

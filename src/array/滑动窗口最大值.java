@@ -8,7 +8,8 @@ import java.util.PriorityQueue;
 public class 滑动窗口最大值 {
 
     /**
-     * 给你一个整数数组nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
+     * 给你一个整数数组nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。
+     * 你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
      * 返回 滑动窗口中的最大值 。
      */
 
@@ -58,6 +59,7 @@ public class 滑动窗口最大值 {
         LinkedList<Integer> queue = new LinkedList();
 
         for (int i = 0; i < k; i++) {
+            // 单调递减栈
             while (!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]) {
                 queue.pollLast();
             }
@@ -76,10 +78,10 @@ public class 滑动窗口最大值 {
 
             queue.offerLast(i);
 
+            // 如果当前窗口左边界超过
             while (!queue.isEmpty() && queue.peekFirst() <= i - k) {
                 queue.pollFirst();
             }
-
 
             // res存的是值，队列存的是下标
             res[i - k + 1] = nums[queue.peekFirst()];
