@@ -14,8 +14,6 @@ public class 破解闯关密码 {
      * 请编写一个程序返回这个密码。
      */
     public String crackPassword(int[] password) {
-        int[] used = new int[password.length];
-
         List<String> list = new ArrayList();
 
         for (int num: password) {
