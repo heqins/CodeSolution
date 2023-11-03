@@ -1,6 +1,6 @@
 package array;
 
-public class 搜索旋转排序数组2 {
+public class 搜索旋转排序数组2_2 {
 
     /**
      * 已知存在一个按非降序排列的整数数组 nums ，数组中的值不必互不相同。

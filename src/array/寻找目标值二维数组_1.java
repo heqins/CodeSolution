@@ -1,6 +1,6 @@
 package array;
 
-public class 寻找目标值二维数组 {
+public class 寻找目标值二维数组_1 {
 
     /**
      * m*n 的二维数组 plants 记录了园林景观的植物排布情况，具有以下特性：

@@ -12,6 +12,7 @@ public class 库存管理3 {
         if (stock == null || stock.length == 0) {
             return new int[]{-1, -1};
         }
+
         quickSort(stock, 0, stock.length - 1);
 
         return Arrays.copyOf(stock, cnt);

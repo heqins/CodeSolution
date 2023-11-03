@@ -3,7 +3,7 @@ package array;
 import java.util.HashSet;
 import java.util.Set;
 
-public class 最长连续序列 {
+public class 最长连续序列_2 {
 
     /**
      * 给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。

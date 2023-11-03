@@ -1,11 +1,10 @@
 package array;
 
 import java.util.Comparator;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-public class 滑动窗口最大值 {
+public class 滑动窗口最大值_2 {
 
     /**
      * 给你一个整数数组nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。
@@ -31,6 +30,7 @@ public class 滑动窗口最大值 {
         for (int i = 0; i < k; i++) {
             queue.offer(new int[]{nums[i], i});
         }
+
         // 初始化第一个窗口的值到目标数组中
         res[0] = queue.peek()[0];
 

@@ -1,6 +1,8 @@
 package array;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 public class 个数相同的子数组 {

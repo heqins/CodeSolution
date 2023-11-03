@@ -3,7 +3,7 @@ package array;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 和为k的子数组 {
+public class 和为k的子数组_2 {
 
     /**
      * 题目：输入一个整数数组和一个整数k，请问数组中有多少个数字之和等于k的连续子数组？

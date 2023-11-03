@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class 前k个高频元素 {
+public class 前k个高频元素_3 {
 
     /**
      * 给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。
@@ -14,6 +14,7 @@ public class 前k个高频元素 {
         int[] nums = new int[]{1,2,2,1,1,4};
         topKFrequent(nums, 2);
     }
+
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap();
 

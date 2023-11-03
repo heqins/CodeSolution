@@ -1,6 +1,6 @@
 package array;
 
-public class 寻找峰值 {
+public class 寻找峰值_3 {
 
     /**
      * 峰值元素是指其值严格大于左右相邻值的元素。

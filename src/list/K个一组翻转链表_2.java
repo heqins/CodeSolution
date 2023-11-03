@@ -3,7 +3,7 @@ package list;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class K个一组翻转链表 {
+public class K个一组翻转链表_2 {
 
     /**
      * 给你链表的头节点 head ，每 k 个节点一组进行翻转，请你返回修改后的链表。
@@ -20,50 +20,72 @@ public class K个一组翻转链表 {
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {
-        if (head == null) {
+        if (head == null || k == 0) {
             return head;
         }
 
-        int length = getLength(head);
-        if (length < k) {
+        int len = getLength(head);
+        if (len < k) {
             return head;
         }
 
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
-
-        // pre是要翻转区间的前一个
+        ListNode cur = dummy;
         ListNode pre = dummy;
 
-        while (length >= k) {
-            ListNode cur = pre.next;
-            ListNode nextStart = cur;
-
-            for (int i = 1; i < k; i++) {
-                ListNode temp = cur.next;
-                // cur的Next指针需要在翻转过程中一直更新
-                cur.next = temp.next;
-                // 变得是pre.next
-                // pre本身不变，pre.next指向要翻转的那个节点的前面
-                // 要翻转的就是temp(cur.next),但cur本身不用变，cur.next指针变
-                temp.next = pre.next;
-                pre.next = temp;
+        while (len >= k) {
+            for (int i = 0; i < k; i++) {
+                cur = cur.next;
             }
 
-            pre = nextStart;
-            length -= k;
+            if (cur == null) {
+                break;
+            }
+
+            ListNode next = cur.next;
+
+            cur.next = null;
+
+            ListNode start = pre.next;
+
+            // last = 2 pre = dummy
+            ListNode last = reverse(pre.next);
+
+            pre.next = last;
+
+            start.next = next;
+
+            cur = start;
+
+            pre = start;
+
+            len -= k;
         }
 
         return dummy.next;
     }
 
+    public ListNode reverse(ListNode head) {
+        ListNode cur = head;
+        ListNode pre = null;
+
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+
+            cur = next;
+        }
+
+        return pre;
+    }
+
     public int getLength(ListNode head) {
         ListNode cur = head;
         int count = 0;
-
         while (cur != null) {
             count++;
-
             cur = cur.next;
         }
 

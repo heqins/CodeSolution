@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class 最长递增子序列 {
+public class 最长递增子序列_1 {
 
     /**
      * 给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。

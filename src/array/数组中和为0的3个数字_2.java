@@ -2,10 +2,9 @@ package array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-public class 数组中和为0的3个数字 {
+public class 数组中和为0的3个数字_2 {
 
     /**
      * 题目：输入一个数组，如何找出数组中所有和为0的3个数字的三元组？

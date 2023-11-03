@@ -1,6 +1,6 @@
 package array;
 
-public class 乘积小于k的子数组 {
+public class 乘积小于k的子数组_2 {
 
     /**
      * 题目：输入一个由正整数组成的数组和一个正整数k，
