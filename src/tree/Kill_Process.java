@@ -30,11 +30,11 @@ public class Kill_Process {
      * Kill 5 will also kill 10.
      */
     public static void main(String[] args) {
-        List<Integer> pid = List.of(1, 3, 10, 5);
-        List<Integer> ppid = List.of(3, 0, 5, 3);
-
-        Kill_Process  k = new Kill_Process();
-        k.killProcess(pid, ppid, 5);
+//        List<Integer> pid = List.of(1, 3, 10, 5);
+//        List<Integer> ppid = List.of(3, 0, 5, 3);
+//
+//        Kill_Process  k = new Kill_Process();
+//        k.killProcess(pid, ppid, 5);
 
     }
     public List<Integer> killProcess(List<Integer> pid, List<Integer> ppid, int kill) {
