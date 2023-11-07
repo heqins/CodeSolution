@@ -63,6 +63,7 @@ public class K个一组翻转链表_2 {
             len -= k;
         }
 
+        // 因为dummy.next = head; 所以后面链表翻转后只要用dummy.next就可以把第一组链表的起点拿到
         return dummy.next;
     }
 
