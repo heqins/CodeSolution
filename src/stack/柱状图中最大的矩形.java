@@ -26,7 +26,7 @@ public class 柱状图中最大的矩形 {
         int[] left = new int[heights.length];
 
         for (int i = 0; i < heights.length; i++) {
-            // 从左往右遍历的时候，此时出栈找到的是以当前node.id高度能拼出的最大矩阵最右边的那个端点
+            // 从左往右遍历的时候，此时出栈找到的是以当前node.id高度能拼出的矩阵最右边的那个端点
             while (!queue.isEmpty() && queue.peek().val > heights[i]) {
                 Node node = queue.poll();
                 right[node.id] = i - node.id;
