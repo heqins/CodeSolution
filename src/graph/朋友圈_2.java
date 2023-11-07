@@ -3,7 +3,7 @@ package graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class 朋友圈 {
+public class 朋友圈_2 {
 
     /**
      * 题目：假设一个班级中有n个学生。学生之间有些是朋友，有些

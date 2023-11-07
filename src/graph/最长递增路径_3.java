@@ -1,6 +1,6 @@
 package graph;
 
-public class 最长递增路径 {
+public class 最长递增路径_3 {
 
     /**
      * 题目：输入一个整数矩阵，请求最长递增路径的长度。矩阵中

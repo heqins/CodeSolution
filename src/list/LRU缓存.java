@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LRU缓存 {
+
     class DLinkedNode {
         int key;
         int value;

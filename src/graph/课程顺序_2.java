@@ -2,7 +2,7 @@ package graph;
 
 import java.util.*;
 
-public class 课程顺序 {
+public class 课程顺序_2 {
 
     /**
      * 题目：n门课程的编号为0～n-1。输入一个数组

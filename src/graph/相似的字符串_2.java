@@ -1,6 +1,6 @@
 package graph;
 
-public class 相似的字符串 {
+public class 相似的字符串_2 {
 
     /**
      * 题目：如果交换字符串X中的两个字符就能得到字符串Y，那么
@@ -29,6 +29,8 @@ public class 相似的字符串 {
         int count = words.length;
         for (int i = 0; i < words.length; i++) {
             for (int j = i + 1; j < words.length; j++) {
+                // 每合并一个就减少一组可能解
+                // 题目有相似的约束，要先判断
                 if (similar(words[i], words[j]) && union(fathers, i, j)) {
                     count--;
                 }

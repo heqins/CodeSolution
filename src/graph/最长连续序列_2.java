@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class 最长连续序列 {
+public class 最长连续序列_2 {
 
     /**
      * 题目：输入一个无序的整数数组，请计算最长的连续数值序列
