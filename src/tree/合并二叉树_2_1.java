@@ -1,6 +1,6 @@
 package tree;
 
-public class 合并二叉树_2 {
+public class 合并二叉树_2_1 {
 
     /**
      * 给你两棵二叉树： root1 和 root2 。

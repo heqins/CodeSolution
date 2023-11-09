@@ -1,6 +1,6 @@
 package tree;
 
-public class 二叉树展开为链表 {
+public class 二叉树展开为链表_2_2 {
 
     /**
      * 给你二叉树的根结点 root ，请你将它展开为一个单链表：

@@ -1,6 +1,6 @@
 package tree;
 
-public class 二叉树剪枝_2 {
+public class 二叉树剪枝_2_1 {
 
     /**
      * 给你二叉树的根结点 root ，此外树的每个结点的值要么是 0 ，要么是 1 。

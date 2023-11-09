@@ -1,6 +1,6 @@
 package tree;
 
-public class 二叉搜索树中的插入操作 {
+public class 二叉搜索树中的插入操作_1 {
 
     /**
      * 给定二叉搜索树（BST）的根节点 root 和要插入树中的值 value ，将值插入二叉搜索树。

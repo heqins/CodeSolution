@@ -3,7 +3,7 @@ package tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class 二叉树的完全性检验_2 {
+public class 二叉树的完全性检验_2_1 {
 
     /**
      * 给你一棵二叉树的根节点 root ，请你判断这棵树是否是一棵 完全二叉树 。

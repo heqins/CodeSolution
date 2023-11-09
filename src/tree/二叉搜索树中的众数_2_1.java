@@ -3,7 +3,7 @@ package tree;
 import java.util.ArrayList;
 import java.util.List;
 
-public class 二叉搜索树中的众数_2 {
+public class 二叉搜索树中的众数_2_1 {
 
     /**
      * 给你一个含重复值的二叉搜索树（BST）的根节点 root ，找出并返回 BST 中的所有 众数（即，出现频率最高的元素）。

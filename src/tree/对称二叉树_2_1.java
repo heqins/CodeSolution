@@ -2,7 +2,7 @@ package tree;
 
 import java.util.LinkedList;
 
-public class 对称二叉树_2 {
+public class 对称二叉树_2_1 {
 
     /**
      * 给你一个二叉树的根节点 root ， 检查它是否轴对称。
@@ -54,27 +54,26 @@ public class 对称二叉树_2 {
     }
 
     public boolean isSymmetric(TreeNode root) {
-        if (root == null || (root.left == null && root.right == null)) {
-            return true;
-        }
-
-        // 递归形式
-        return compare(root.left, root.right);
+        return helper(root.left, root.right);
     }
 
-    public boolean compare(TreeNode left, TreeNode right) {
+    public boolean helper(TreeNode left, TreeNode right) {
         if (left == null && right == null) {
             return true;
         }
 
-        if (left == null || right == null) {
+        if (left == null && right != null) {
             return false;
         }
 
-        if (left.value.intValue() != right.value.intValue()) {
+        if (right == null && left != null) {
             return false;
         }
 
-        return compare(left.left, right.right) && compare(left.right, right.left);
+        if (left.value != right.value) {
+            return false;
+        }
+
+        return helper(left.left, right.right) && helper(left.right, right.left);
     }
 }

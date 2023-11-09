@@ -1,6 +1,6 @@
 package tree;
 
-public class 完全二叉树的节点个数_2 {
+public class 完全二叉树的节点个数_2_1 {
 
     /**
      * 给你一棵 完全二叉树 的根节点 root ，求出该树的节点个数。

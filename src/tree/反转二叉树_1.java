@@ -2,7 +2,7 @@ package tree;
 
 import java.util.Stack;
 
-public class 反转二叉树 {
+public class 反转二叉树_1 {
 
 
     /**
