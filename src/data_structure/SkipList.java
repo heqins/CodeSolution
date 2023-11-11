@@ -21,6 +21,7 @@ public class SkipList <T> {
     int highLevel;//层数
     Random random;// 用于投掷硬币
     final int MAX_LEVEL = 32;//最大的层
+
     SkipList(){
         random=new Random();
         headNode=new SkipNode(Integer.MIN_VALUE,null);
