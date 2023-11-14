@@ -5,6 +5,8 @@ public class Node {
     public Node left;
     public Node right;
 
+    Node next;
+
     public Node() {}
 
     public Node(int _val) {
