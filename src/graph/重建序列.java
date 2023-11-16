@@ -1,5 +1,6 @@
 package graph;
 
+import java.lang.reflect.Proxy;
 import java.util.*;
 
 public class 重建序列 {
@@ -16,6 +17,7 @@ public class 重建序列 {
         List<List<Integer>> seqs = new ArrayList<>();
         seqs.add(Arrays.asList(5, 2, 6, 3));
         seqs.add(Arrays.asList(4, 1, 5, 2));
+
 
         System.out.println(solve(org, seqs));
     }
