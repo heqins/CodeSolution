@@ -1,5 +1,9 @@
 package array;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class 交易逆序对的总数_2 {
 
     /**
@@ -73,4 +77,76 @@ public class 交易逆序对的总数_2 {
         return count;
     }
 
+
+    public static void main(String[] args) {
+        交易逆序对的总数_2 t = new 交易逆序对的总数_2();
+        t.reversePairs2(new int[]{5, 3, 4, 1, 2});
+    }
+    public int reversePairs2(int[] nums) {
+        int count = 0;
+        Map<Integer, Integer> ranks = getRanks(nums);
+        int length = nums.length;
+        BinaryIndexedTree bit = new BinaryIndexedTree(length);
+        for (int i = 0; i < length; i++) {
+            int rank = ranks.get(nums[i]);
+            count += bit.getCount(rank + 1, length - 1);
+            bit.add(rank);
+        }
+        return count;
+    }
+
+    public Map<Integer, Integer> getRanks(int[] nums) {
+        int length = nums.length;
+
+        int[] sorted = new int[length];
+
+        System.arraycopy(nums, 0, sorted, 0, length);
+
+        Arrays.sort(sorted);
+
+        Map<Integer, Integer> ranks = new HashMap<Integer, Integer>();
+
+        for (int i = 0; i < length; i++) {
+            int num = sorted[i];
+            if (i == 0 || num > sorted[i - 1]) {
+                ranks.put(num, i);
+            }
+        }
+        return ranks;
+    }
+}
+
+class BinaryIndexedTree {
+    int length;
+    int[] tree;
+
+    public BinaryIndexedTree(int length) {
+        this.length = length;
+        this.tree = new int[length + 1];
+    }
+
+    public int getCount(int start, int end) {
+        return getPrefixSum(end + 1) - getPrefixSum(start);
+    }
+
+    public void add(int index) {
+        index++;
+        while (index <= length) {
+            tree[index]++;
+            index += lowbit(index);
+        }
+    }
+
+    private int getPrefixSum(int index) {
+        int sum = 0;
+        while (index > 0) {
+            sum += tree[index];
+            index -= lowbit(index);
+        }
+        return sum;
+    }
+
+    private static int lowbit(int x) {
+        return x & (-x);
+    }
 }
