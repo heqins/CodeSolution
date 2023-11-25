@@ -11,8 +11,10 @@ public class 最大二叉树_1 {
      */
 
     // 递归分治
-    // 设置递归函数 TreeNode build(int[] nums, int l, int r) 含义为从 nums 中的 [l,r][l, r][l,r] 下标范围进行构建，返回构建后的头结点。
-    // 当 l>rl > rl>r 时，返回空节点，否则在 [l,r][l, r][l,r] 中进行扫描，找到最大值对应的下标 idx 并创建对应的头结点，
+    // 设置递归函数 TreeNode build(int[] nums, int l, int r)
+    // 含义为从 nums 中的 [l,r][l, r][l,r] 下标范围进行构建，返回构建后的头结点。
+    // 当 l>rl > rl>r 时，返回空节点，否则在 [l,r][l, r][l,r] 中进行扫描，
+    // 找到最大值对应的下标 idx 并创建对应的头结点，
     // 递归构建 [l,idx−1][l, idx - 1][l,idx−1] 和 [idx+1,r][idx + 1, r][idx+1,r] 作为头节点的左右子树。
     // 时间复杂度：O(n2)  空间复杂度：忽略递归带来的额外空间开销，复杂度为 O(1)
 

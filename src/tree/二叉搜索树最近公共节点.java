@@ -4,10 +4,43 @@ public class 二叉搜索树最近公共节点 {
 
     /**
      * 给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。
-     * 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
+     * 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，
+     * 满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
      * 例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]
      * @param args
      */
+    public static TreeNode find(TreeNode root, TreeNode p, TreeNode q) {
+        while (root != null) {
+            if (root.value < p.value && root.value < q.value) {
+                root = root.right;
+            }else if (root.value > p.value && root.value > q.value) {
+                root = root.left;
+            }else {
+                return root;
+            }
+        }
+
+        return null;
+    }
+
+    public static TreeNode find2(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || p == root || q == root) {
+            return root;
+        }
+
+        TreeNode left = find2(root.left, p, q);
+        TreeNode right = find2(root.right, p, q);
+
+        if (left == null) {
+            return right;
+        }
+
+        if (right == null) {
+            return left;
+        }
+
+        return root;
+    }
 
     // 利用二叉搜索树的特性，最近公共祖先必然大于p或q中的一个，小于p或q的一个
 

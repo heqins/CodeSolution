@@ -79,9 +79,15 @@ public class 交易逆序对的总数_2 {
 
 
     public static void main(String[] args) {
+        Integer one = new Integer(1);
+        Integer one2 = new Integer(1);
+
+        System.out.println(one == 1);
+
         交易逆序对的总数_2 t = new 交易逆序对的总数_2();
         t.reversePairs2(new int[]{5, 3, 4, 1, 2});
     }
+
     public int reversePairs2(int[] nums) {
         int count = 0;
         Map<Integer, Integer> ranks = getRanks(nums);
@@ -92,6 +98,7 @@ public class 交易逆序对的总数_2 {
             count += bit.getCount(rank + 1, length - 1);
             bit.add(rank);
         }
+
         return count;
     }
 

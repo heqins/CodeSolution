@@ -31,11 +31,14 @@ public class LRU缓存 {
 
     public int get(int key) {
         DLinkedNode node = cache.get(key);
+
         if (node == null) {
             return -1;
         }
+
         // 如果 key 存在，先通过哈希表定位，再移到头部
         moveToHead(node);
+
         return node.value;
     }
 
@@ -44,22 +47,29 @@ public class LRU缓存 {
         if (node == null) {
             // 如果 key 不存在，创建一个新的节点
             DLinkedNode newNode = new DLinkedNode(key, value);
+
             // 添加进哈希表
             cache.put(key, newNode);
+
             // 添加至双向链表的头部
             addToHead(newNode);
+
             ++size;
+
             if (size > capacity) {
                 // 如果超出容量，删除双向链表的尾部节点
                 DLinkedNode tail = removeTail();
+
                 // 删除哈希表中对应的项
                 cache.remove(tail.key);
+
                 --size;
             }
         }
         else {
             // 如果 key 存在，先通过哈希表定位，再修改 value，并移到头部
             node.value = value;
+
             moveToHead(node);
         }
     }

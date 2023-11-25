@@ -46,8 +46,11 @@ public class 从前序与中序遍历序列构造二叉树 {
 
         int sub = inRootIndex - inStartIndex;
 
-        TreeNode left = buildTreeHelper(preorder, preStartIndex + 1, preStartIndex + sub, inorder, inStartIndex, inRootIndex - 1);
-        TreeNode right = buildTreeHelper(preorder, preStartIndex + sub + 1, preEndIndex, inorder, inStartIndex + sub + 1, inEndIndex);
+        TreeNode left = buildTreeHelper(preorder, preStartIndex + 1, preStartIndex + sub,
+                inorder, inStartIndex, inRootIndex - 1);
+
+        TreeNode right = buildTreeHelper(preorder, preStartIndex + sub + 1, preEndIndex,
+                inorder, inStartIndex + sub + 1, inEndIndex);
 
         root.left = left;
         root.right = right;

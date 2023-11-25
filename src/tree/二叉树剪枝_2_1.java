@@ -6,6 +6,34 @@ public class 二叉树剪枝_2_1 {
      * 给你二叉树的根结点 root ，此外树的每个结点的值要么是 0 ，要么是 1 。
      * 返回移除了所有不包含 1 的子树的原二叉树。
      * 节点 node 的子树为 node 本身加上所有 node 的后代。
+     *
+     * public static TreeNode pruneTree(TreeNode root) {
+     *    if (isAllZero(root)) {
+     *        return null;
+     *    }
+     *
+     *    return root;
+     * }
+     *
+     * public static boolean isAllZero(TreeNode root) {
+     *     if (root == null) {
+     *         return true;
+     *     }
+     *
+     *     TreeNode left = isAllZero(root.left);
+     *     TreeNode right = isAllZero(root.right);
+     *
+     *     if (left) {
+     *         root.left = null;
+     *     }
+     *
+     *     if (right) {
+     *         root.right = null;
+     *     }
+     *
+     *     return root.value == 0 && left && right;
+     * }
+     *
      * @param root
      * @return
      */

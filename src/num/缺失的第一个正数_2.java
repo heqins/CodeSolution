@@ -1,15 +1,18 @@
 package num;
 
 public class 缺失的第一个正数_2 {
+
     /**
      * 给你一个未排序的整数数组 nums ，请你找出其中没有出现的最小的正整数。
-     *
+     * []
      * 请你实现时间复杂度为 O(n) 并且只使用常数级别额外空间的解决方案。
      */
     public static void main(String[] args) {
         int[] nums = new int[]{1, 2, 0};
 
-        firstMissingPositive(nums);
+        int result = firstMissingPositive(nums);
+
+        System.out.println(result);
     }
 
     public static int firstMissingPositive(int[] nums) {

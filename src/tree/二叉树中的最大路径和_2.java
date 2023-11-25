@@ -11,7 +11,6 @@ public class 二叉树中的最大路径和_2 {
     int result = Integer.MIN_VALUE;
 
     public int maxPathSum(TreeNode root) {
-
         helper(root);
 
         return result;

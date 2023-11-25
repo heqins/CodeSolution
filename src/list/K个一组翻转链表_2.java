@@ -52,6 +52,7 @@ public class K个一组翻转链表_2 {
             // last = 2 pre = dummy
             ListNode last = reverse(pre.next);
 
+            //这里的last指的其实是翻转前的最后一个节点
             pre.next = last;
 
             start.next = next;
