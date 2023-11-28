@@ -2,7 +2,7 @@ package num;
 
 import java.util.Arrays;
 
-public class 前n个数字二进制形式中1的个数_3 {
+public class 前n个数字二进制形式中1的个数_3_1 {
 
     /**
      * 题目：输入一个非负数n，请计算0到n之间每个数字的二进制形式中1的个数，并输出一个数组。
@@ -20,7 +20,6 @@ public class 前n个数字二进制形式中1的个数_3 {
     /**
      * 利用整数i的二进制形式中1的个数比“i&（i-1）”的二进制形式中1的个数多1
      * 时间复杂度：O(n)
-     * @param num
      * @return
      */
     public static int[] countBits(int n) {
